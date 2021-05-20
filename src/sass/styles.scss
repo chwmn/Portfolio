@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "RightGrotesk";
+  src: url("/assets/fonts/RightGrotesk-Medium.woff2") format("woff2"),
+    url("/assets/fonts/RightGrotesk-Medium.woff") format("woff");
+}
+
+body {
+  font-family: "RightGrotesk";
+  font-size: 100px;
+}

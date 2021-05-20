@@ -8,6 +8,9 @@ module.exports = function (eleventyConfig) {
     "png",
     "svg",
     "js",
+    "woff2",
+    "woff",
+    "ttf",
   ]);
 
   function sortByPageOrder(values) {
