@@ -4,7 +4,19 @@
     url("/assets/fonts/RightGrotesk-Medium.woff") format("woff");
 }
 
-body {
-  font-family: "RightGrotesk";
+@font-face {
+  font-family: "Migra";
+  src: url("/assets/fonts/Migra-Extrabold.woff2") format("woff2"),
+    url("/assets/fonts/Migra-Extrabold.woff") format("woff");
+}
+
+h1 {
+  font-family: "Migra";
   font-size: 100px;
+}
+
+h2 {
+  font-family: "RightGrotesk";
+  font-size: 50px;
+  // letter-spacing: -2px;
 }
