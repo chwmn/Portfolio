@@ -7,10 +7,10 @@ body {
   //   background-color: #2d593e;
   //   background-color: #26452e;
   background-color: #486b51;
-  height: 90vh;
+  height: 80vh;
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 20px;
   align-content: space-between;
 
   h1 {
@@ -65,29 +65,38 @@ nav {
   }
 }
 
+//WORKS
 .work {
-  height: 90vh;
   background-color: #000;
-  padding: 50px 10px 50px 10px;
-  display: flex;
+  padding: 20px;
+  // display: flex;
+  // flex-wrap: wrap;
 
-  h1 {
-    color: #fff;
-    font-family: "WoodlandUltralight";
-    font-size: 24px;
-    top: 50vh;
+  header {
+    h1 {
+      font-family: "MigraRegular";
+      font-size: 48px;
+      color: #fff;
+      margin: 20px 0;
+    }
+
+    .worksTitle {
+      display: flex;
+      font-family: "WoodlandUltralight";
+      font-size: 24px;
+      justify-content: space-between;
+      color: #fff;
+      margin: 20px 0;
+    }
   }
 }
 
-.sidePanel {
-  width: 10%;
-}
-
-.midContent {
+.worksImage {
   padding: 10px;
   border: 1px solid #fff;
   height: fit-content;
   border-radius: 5px;
+  margin: 20px 0;
 
   .homeImage {
     width: 100%;
@@ -102,9 +111,27 @@ nav {
   .dot {
     width: 10px;
     height: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid #fff;
     align-self: center;
     margin-left: 5px;
+  }
+}
+
+.worksContent {
+  margin: 20px 0;
+
+  ul {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  li {
+    font-family: "NeueMontrealLight";
+    font-size: 16px;
+    color: #fff;
+    width: fit-content;
   }
 }
