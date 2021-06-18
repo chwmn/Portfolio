@@ -12,6 +12,7 @@ body {
   flex-wrap: wrap;
   padding: 20px;
   align-content: space-between;
+  justify-content: flex-end;
 
   h1 {
     font-family: "MigraRegular";
@@ -34,12 +35,6 @@ body {
     color: #fff;
     text-align: right;
   }
-
-  .test {
-    height: 70vh;
-    display: block;
-    content: none;
-  }
 }
 
 .bioInfo {
@@ -56,6 +51,7 @@ nav {
     justify-content: space-between;
     width: 100%;
   }
+
   li {
     font-family: "NeueMontrealLight";
     font-size: 16px;
@@ -63,6 +59,15 @@ nav {
     color: #fff;
     width: fit-content;
   }
+}
+
+.portrait {
+  width: 300px;
+  height: 350px;
+  transform: scale(120%);
+  object-fit: cover;
+  border-radius: 150px / 175px;
+  margin: 30px;
 }
 
 //WORKS
@@ -100,11 +105,16 @@ nav {
 
   .homeImage {
     width: 100%;
+    box-sizing: border-box;
+  }
+
+  .frame {
+    border: 1px solid #fff;
   }
 
   .bar {
     height: 20px;
-    border: 1px solid #fff;
+    border-bottom: 1px solid #fff;
     display: flex;
   }
 
