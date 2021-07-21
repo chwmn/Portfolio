@@ -74,11 +74,10 @@ nav {
 //WORKS
 
 #projects header {
-  // position: sticky;
-  // top: 0;
   height: 80px;
   background-color: black;
   display: flex;
+  // flex for aligning h1 in center
 
   h1 {
     align-self: center;
@@ -91,7 +90,7 @@ nav {
 }
 
 .project {
-  padding: 3vh 3vh 10vh 3vh;
+  padding: 20px 20px 70px 20px;
   background-image: linear-gradient(#000, #212121);
   box-sizing: border-box;
   position: sticky;
@@ -108,8 +107,6 @@ nav {
 }
 
 .worksTitle {
-  // display: flex;
-  justify-content: space-around;
   color: #fff;
   // width: 200px;
 
@@ -163,6 +160,7 @@ nav {
   border-radius: 35px;
   height: fit-content;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .worksImage {
@@ -212,9 +210,11 @@ nav {
   margin: 5px 0 5px 5px;
 }
 
-.aboutSection {
+#about {
   height: 100vh;
   background-color: white;
+  // position: sticky;
+  // top: 0;
 }
 
 footer {
@@ -234,13 +234,39 @@ footer {
     margin: 0.5em;
   }
 
-  div {
-  }
-
   p {
     font-family: "NeueMontrealLight";
     font-size: 16px;
     color: #fff;
     width: fit-content;
+  }
+}
+
+// media queries
+@media screen and (max-height: 550px) {
+  .project {
+    position: relative;
+    // min height required for position sticky effect to work
+  }
+}
+
+@media screen and (min-width: 530px) {
+  .worksTitle {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .worksImage {
+    .homeImage {
+      width: 490px;
+    }
+  }
+
+  .worksInfo {
+    width: 490px;
+  }
+
+  .worksButton {
+    width: 490px;
   }
 }
