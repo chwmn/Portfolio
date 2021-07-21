@@ -73,7 +73,7 @@ nav {
 
 //WORKS
 
-.projectSection header {
+#projects header {
   // position: sticky;
   // top: 0;
   height: 80px;
@@ -90,9 +90,9 @@ nav {
   }
 }
 
-.projects {
+.project {
   padding: 3vh 3vh 10vh 3vh;
-  background-color: #000;
+  background-image: linear-gradient(#000, #212121);
   box-sizing: border-box;
   position: sticky;
   top: 0;
@@ -111,17 +111,20 @@ nav {
   // display: flex;
   justify-content: space-around;
   color: #fff;
-  width: 200px;
-  margin: 0 0 20px 0;
+  // width: 200px;
 
   h2 {
-    font-family: "MigraRegular";
+    // font-family: "MigraRegular";
+    font-family: "WoodlandUltralight";
     font-size: 36px;
+    width: 200px;
+    margin-bottom: 20px;
   }
 
   h3 {
-    font-family: "WoodlandUltralight";
-    font-size: 24px;
+    // font-family: "WoodlandUltralight";
+    font-family: "NeueMontrealLight";
+    font-size: 16px;
   }
 }
 
@@ -209,16 +212,31 @@ nav {
   margin: 5px 0 5px 5px;
 }
 
+.aboutSection {
+  height: 100vh;
+  background-color: white;
+}
+
 footer {
-  // background-color: black;
+  background-color: black;
   height: 200px;
+
+  ul {
+    padding: 3vh;
+    margin: 0 auto;
+  }
 
   li {
     font-family: "NeueMontrealLight";
     font-size: 16px;
     color: #fff;
     width: fit-content;
+    margin: 0.5em;
   }
+
+  div {
+  }
+
   p {
     font-family: "NeueMontrealLight";
     font-size: 16px;

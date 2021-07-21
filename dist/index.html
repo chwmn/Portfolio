@@ -21,7 +21,7 @@
           <li>CONTACT</li>
         </ul>
       </nav>
-      <img class="portrait" src="/assets/images/portrait.jpg" alt="" />
+      <!-- <img class="portrait" src="/assets/images/portrait.jpg" alt="" /> -->
       <div class="bioInfo">
         <h1>Chulmin Han</h1>
         <h2>MICA 2021 — GENERAL FINE ARTS — GRAPHIC DESIGN</h2>
@@ -32,16 +32,18 @@
       </div>
     </section>
 
-    <section class="projectSection">
+    <section id="projects">
       <header>
         <h1>PROJECTS</h1>
       </header>
 
+      <!-- projects id and project class are different in that projects is the whole and project is the individual works -->
+
       <!-- canvas redesign -->
-      <div class="projects">
+      <div class="project">
         <div class="worksTitle">
           <h2>CANVAS REDESIGN</h2>
-          <h3>FALL 2020</h3>
+          <h3>FALL 2020 / SUMMER 2021</h3>
         </div>
         <div class="worksImage">
           <div class="frame">
@@ -53,6 +55,68 @@
             <img
               src="assets/images/CR01.png"
               alt="Canvas Redesign homepage"
+              class="homeImage"
+            />
+          </div>
+        </div>
+        <div class="worksInfo">
+          <ul>
+            <li>HTML</li>
+            <li>SASS</li>
+            <li>11ty</li>
+          </ul>
+        </div>
+        <a  class="worksButton" href="">SEE MORE →</a>
+      </div>
+
+    <!-- Visual Library -->
+      <div class="project">
+        <div class="worksTitle">
+          <h2>VISUAL LIBRARY</h2>
+          <h3>SPRING 2021</h3>
+        </div>
+        <div class="worksImage">
+          <div class="frame">
+            <div class="bar">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <img
+              src="assets/images/VL01.png"
+              alt="Visual Library home page"
+              class="homeImage"
+            />
+          </div>
+        </div>
+        <div class="worksInfo">
+          <ul>
+            <li>HTML</li>
+            <li>SASS</li>
+            <li>JSON</li>
+            <li>JS</li>
+            <li>11ty</li>
+          </ul>
+        </div>
+        <a  class="worksButton" href="">SEE MORE →</a>
+      </div>
+
+      <!-- AGAINST THE GRAIN -->
+      <div class="project">
+        <div class="worksTitle">
+          <h2>AGAINST THE GRAIN</h2>
+          <h3>SPRING 2020</h3>
+        </div>
+        <div class="worksImage">
+          <div class="frame">
+            <div class="bar">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <img
+              src="assets/images/AtG01.png"
+              alt="AGAINST THE GRAIN home page"
               class="homeImage"
             />
           </div>
@@ -67,34 +131,9 @@
         <a  class="worksButton" href="">SEE MORE →</a>
       </div>
 
-      <div class="projects">
-        <div class="worksTitle">
-          <h2>CANVAS REDESIGN</h2>
-          <h2>FALL 2020</h2>
-        </div>
-        <div class="worksImage">
-          <div class="frame">
-            <div class="bar">
-              <div class="dot"></div>
-              <div class="dot"></div>
-              <div class="dot"></div>
-            </div>
-            <img
-              src="assets/images/CR01.png"
-              alt="Canvas Redesign homepage"
-              class="homeImage"
-            />
-          </div>
-        </div>
-        <div class="worksInfo">
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SVG</li>
-          </ul>
-        </div>
-        <a  class="worksButton" href="">SEE MORE →</a>
-      </div>
+<section class="aboutSection">
+
+</section>
 
 
     <footer>
@@ -110,8 +149,11 @@
         <li>BEHANCE</li>
       </ul>
 
-      <p>CHULMIN HAN</p>
-      <p>©2021</p>
+      <ul>
+        <li>CHULMIN HAN</li>
+        <li>©2021</li>
+        <li>MADE USING 11ty</li>
+      </ul>
     </footer>
   </body>
 </html>
