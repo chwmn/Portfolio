@@ -7,7 +7,8 @@ body {
   //   background-color: #2d593e;
   //   background-color: #26452e;
   background-color: #486b51;
-  height: 80vh;
+  // background-color: #386944;
+  height: 90vh;
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
@@ -71,65 +72,65 @@ nav {
 }
 
 //WORKS
-.work {
-  background-color: #000;
-  padding: 20px;
-  // display: flex;
-  // flex-wrap: wrap;
 
-  header {
-    h1 {
-      font-family: "MigraRegular";
-      font-size: 48px;
-      color: #fff;
-      margin: 20px 0;
-    }
+.projectSection header {
+  // position: sticky;
+  // top: 0;
+  height: 80px;
+  background-color: black;
+  display: flex;
 
-    .worksTitle {
-      display: flex;
-      font-family: "WoodlandUltralight";
-      font-size: 24px;
-      justify-content: space-between;
-      color: #fff;
-      margin: 20px 0;
-    }
-  }
-}
-
-.worksImage {
-  padding: 10px;
-  border: 1px solid #fff;
-  height: fit-content;
-  border-radius: 5px;
-  margin: 20px 0;
-
-  .homeImage {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .frame {
-    border: 1px solid #fff;
-  }
-
-  .bar {
-    height: 20px;
-    border-bottom: 1px solid #fff;
-    display: flex;
-  }
-
-  .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 10px;
-    border: 1px solid #fff;
+  h1 {
     align-self: center;
-    margin-left: 5px;
+    font-family: "MigraRegular";
+    font-size: 48px;
+    color: #fff;
+    // padding: 20px 0;
+    margin: 20px 0 0 20px;
   }
 }
 
-.worksContent {
-  margin: 20px 0;
+.projects {
+  padding: 20px;
+  background-color: #000;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: -1;
+  // height: 100vh;
+  display: grid;
+  height: 100vh;
+  gap: 20px;
+  grid-template-rows: auto 3fr auto auto;
+  // display: flex;
+  // justify-content: space-between;
+  // flex-wrap: wrap;
+}
+
+.worksTitle {
+  // display: flex;
+  justify-content: space-around;
+  color: #fff;
+  width: 200px;
+  margin: 0 0 20px 0;
+
+  h2 {
+    font-family: "MigraRegular";
+    font-size: 36px;
+  }
+
+  h3 {
+    font-family: "WoodlandUltralight";
+    font-size: 24px;
+  }
+}
+
+.worksInfo {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
 
   ul {
     display: flex;
@@ -139,6 +140,86 @@ nav {
   }
 
   li {
+    font-family: "NeueMontrealLight";
+    font-size: 16px;
+    color: #fff;
+    width: fit-content;
+  }
+}
+
+.worksButton {
+  font-family: "WoodlandUltralight";
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #d6d6d6;
+  padding: 15px 0 10px 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-radius: 35px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+
+.worksImage {
+  // padding: 10px;
+  // border: 1px solid #636363;
+  // height: fit-content;
+  // border-radius: 5px;
+  // margin: 0 auto;
+  // width: 800px;
+  // width: 50vw;
+  margin: auto;
+
+  .homeImage {
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid #636363;
+    box-sizing: border-box;
+    border-radius: 0 0 3px 3px;
+    // height: 405px;
+    // height: 95%;
+  }
+
+  // .frame {
+  //   border: 1px solid #636363;
+  //   width: 800px;
+  //   // height: fit-content;
+  //   // height: 425px;
+  // }
+}
+
+.bar {
+  height: 5%;
+  border-top: 1px solid #636363;
+  border-left: 1px solid #636363;
+  border-right: 1px solid #636363;
+  border-radius: 3px 3px 0 0;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  border: 1px solid #636363;
+  align-self: center;
+  margin: 5px 0 5px 5px;
+}
+
+footer {
+  // background-color: black;
+  height: 200px;
+
+  li {
+    font-family: "NeueMontrealLight";
+    font-size: 16px;
+    color: #fff;
+    width: fit-content;
+  }
+  p {
     font-family: "NeueMontrealLight";
     font-size: 16px;
     color: #fff;
