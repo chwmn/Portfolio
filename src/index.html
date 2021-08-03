@@ -25,8 +25,8 @@ layout: base.html
 <!-- section close is placed here to let position sticky work with other elements -->
 
 <!-- projects id and project class are different in that projects is the whole and project is the individual works -->
-{% assign projects = collections.projects | sortByPageOrder %} {% for projects
-in collections.projects%} {% include projects.html %} {% endfor %}
+{% assign projects = collections.projects | sortByPageOrder %} {% for item in
+projects%} {% include projects.html %} {% endfor %}
 
 <section id="about" class="content">
   <header>
