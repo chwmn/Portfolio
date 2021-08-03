@@ -15,9 +15,28 @@
   <body>
     <!-- <section class="navigation"></section> -->
     <section class="projectEntry">
-      {% include nav.html %}
+      <nav class="navBar">
+  <ul>
+    <li>
+      <a class="leafIcon" href="/index.html"
+        ><img src="/assets/svg/leaf04.svg" alt=""
+      /></a>
+    </li>
+    <li>
+      <a href="/index.html#projects"> PROJECTS </a>
+    </li>
+    <li>
+      <a href="/index.html#about"> ABOUT </a>
+    </li>
+    <li>
+      <!-- <a href="#contact"> CONTACT </a> -->
+      CONTACT
+    </li>
+  </ul>
+</nav>
+
       <header>
-        <h1>{{ pageTitle }}</h1>
+        <h1>AGAINST THE GRAIN</h1>
       </header>
       <div class="worksImage extraPad">
         <div class="frame">
@@ -27,7 +46,7 @@
             <div class="dot"></div>
           </div>
           <img
-            src="{{ link }}"
+            src="/assets/images/AtG01.png"
             alt="Canvas Redesign homepage"
             class="projectPageImage"
           />
@@ -35,13 +54,36 @@
       </div>
       <div class="worksInfo extraPad">
         <ul>
-          {% for item in categories %}
-          <li>{{ item }}</li>
-          {% endfor %}
+          
+          <li>HTML</li>
+          
+          <li>CSS</li>
+          
+          <li>SVG</li>
+          
         </ul>
-        <h3>{{ semester }}</h3>
+        <h3>SPRING 2020</h3>
       </div>
     </section>
-    {{ content }} {% include footer.html %}
+     <footer>
+  <ul>
+    <li>PROJECTS</li>
+    <li>ABOUT</li>
+    <li>CONTACT</li>
+  </ul>
+
+  <ul>
+    <li>INSTAGRAM</li>
+    <li>LINKEDIN</li>
+    <li>BEHANCE</li>
+  </ul>
+
+  <ul>
+    <li>CHULMIN HAN</li>
+    <li>©2021</li>
+    <li>MADE USING 11ty</li>
+  </ul>
+</footer>
+
   </body>
 </html>

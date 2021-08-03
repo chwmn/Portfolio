@@ -73,11 +73,50 @@ body {
   }
 }
 
+.navigation {
+  display: flex;
+}
+
+.projectEntry {
+  min-height: 90vh;
+  background-image: linear-gradient(#000, #212121);
+  box-sizing: border-box;
+
+  display: grid;
+  gap: 20px;
+  grid-template-rows: auto auto auto auto;
+
+  header {
+    // width: 400px;
+
+    // margin: 0 auto;
+    display: flex;
+    // justify-content: center;
+    flex-wrap: wrap;
+    height: fit-content;
+    margin: 0 auto;
+
+    h1 {
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      align-self: center;
+      font-family: "Migra";
+      font-weight: 400;
+      font-size: 48px;
+      width: fit-content;
+      margin: 0 20px;
+    }
+  }
+}
+
 .navBar {
   height: fit-content;
   z-index: 1;
-  padding: 20px;
   width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+
   ul {
     display: flex;
     position: relative;
@@ -92,11 +131,20 @@ body {
     // letter-spacing: -2.5px;
     color: #fff;
     width: fit-content;
+    align-self: center;
   }
 
   a {
     color: #fff;
     text-decoration: none;
+  }
+}
+
+.leafIcon {
+  color: #fff;
+  height: 25px;
+  img {
+    height: inherit;
   }
 }
 
@@ -131,7 +179,7 @@ body {
     font-family: "Migra";
     font-weight: 400;
     font-size: 48px;
-    margin: 20px 0 0 20px;
+    margin: 20px 20px 0 20px;
   }
 }
 
@@ -141,12 +189,13 @@ body {
   box-sizing: border-box;
   position: sticky;
   top: 0;
-  z-index: -1;
+  // z-index: -1;
   // height: 100vh;
   display: grid;
   height: 100vh;
   gap: 20px;
   grid-template-rows: auto 3fr auto auto;
+  z-index: 0;
   // display: flex;
   // justify-content: space-between;
   // flex-wrap: wrap;
@@ -193,6 +242,14 @@ body {
     color: #fff;
     width: fit-content;
   }
+
+  h3 {
+    font-family: "NeueMontreal";
+    font-weight: 200;
+    font-size: 16px;
+    color: #fff;
+    margin: 20px auto;
+  }
 }
 
 .worksButton {
@@ -209,6 +266,11 @@ body {
   height: fit-content;
   box-sizing: border-box;
   margin: 0 auto;
+  z-index: 1;
+}
+
+.worksButton:hover {
+  font-style: italic;
 }
 
 .worksImage {
@@ -231,12 +293,18 @@ body {
     // height: 95%;
   }
 
-  // .frame {
-  //   border: 1px solid #636363;
-  //   width: 800px;
-  //   // height: fit-content;
-  //   // height: 425px;
-  // }
+  .projectPageImage {
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid #636363;
+    box-sizing: border-box;
+    border-radius: 0 0 3px 3px;
+  }
+}
+
+.extraPad {
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .bar {
@@ -261,6 +329,7 @@ body {
 #about {
   min-height: 600px;
   background-color: #fafffa;
+  position: relative;
 
   h1 {
     border-bottom: solid 1px red;
@@ -314,6 +383,7 @@ body {
 footer {
   background-color: black;
   height: 200px;
+  position: relative;
 
   ul {
     padding: 20px;
@@ -357,5 +427,13 @@ footer {
 
   .worksButton {
     width: 490px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .worksImage {
+    .projectPageImage {
+      width: 660px;
+    }
   }
 }
