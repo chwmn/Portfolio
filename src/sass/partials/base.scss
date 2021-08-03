@@ -1,51 +1,83 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #000;
 }
 
 .entry {
-  //   background-color: #deffe9;
-  //   background-color: #2d593e;
-  //   background-color: #26452e;
-  background-color: #486b51;
+  // background-color: #deffe9;
+  // background-color: #2d593e;
+  background-color: #26452e;
+  // background-color: #486b51;
+  // background-color: #5862bf;
   // background-color: #386944;
   height: 90vh;
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
-  align-content: space-between;
-  justify-content: flex-end;
+  // align-content: space-between;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+
+  p {
+    font-family: "NeueMontreal";
+    font-weight: 200;
+    font-size: 16px;
+    color: #fff;
+    // text-align: right;
+  }
+}
+
+.leaf01 {
+  display: block;
+  width: 300px;
+  // position: absolute;
+  z-index: 0;
+  margin: 0 auto;
+  z-index: 0;
+  position: absolute;
+}
+
+.bioInfo {
+  width: 500px;
+  height: 233.511px;
+  margin: 0 auto;
+  z-index: 1;
+  background-image: url("/assets/svg/leaf03.svg");
+  background-position: center;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  // overflow: hidden;
+  justify-content: center;
 
   h1 {
-    font-family: "MigraRegular";
+    font-family: "Migra";
+    font-weight: 400;
     font-size: 64px;
-    text-align: right;
+    padding-top: 40px;
+    // text-align: right;
     color: #fff;
   }
 
   h2 {
     font-family: "WoodlandUltralight";
     font-size: 24px;
-    text-align: right;
+    // text-align: right;
     color: #fff;
+    width: 300px;
     // letter-spacing: -2.5px;
   }
-
-  p {
-    font-family: "NeueMontrealLight";
-    font-size: 16px;
-    color: #fff;
-    text-align: right;
-  }
 }
 
-.bioInfo {
-  width: 100%;
-}
-
-nav {
-  width: 100%;
+.navBar {
   height: fit-content;
-
+  z-index: 1;
+  padding: 20px;
+  width: 100%;
   ul {
     display: flex;
     position: relative;
@@ -54,11 +86,17 @@ nav {
   }
 
   li {
-    font-family: "NeueMontrealLight";
+    font-family: "NeueMontreal";
+    font-weight: 200;
     font-size: 16px;
     // letter-spacing: -2.5px;
     color: #fff;
     width: fit-content;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
   }
 }
 
@@ -74,17 +112,25 @@ nav {
 //WORKS
 
 #projects header {
-  height: 80px;
   background-color: black;
-  display: flex;
-  // flex for aligning h1 in center
+
+  h1 {
+    color: #fff;
+  }
+}
+
+.content {
+  header {
+    height: 80px;
+    display: flex;
+    // flex for aligning h1 in center
+  }
 
   h1 {
     align-self: center;
-    font-family: "MigraRegular";
+    font-family: "Migra";
+    font-weight: 400;
     font-size: 48px;
-    color: #fff;
-    // padding: 20px 0;
     margin: 20px 0 0 20px;
   }
 }
@@ -120,7 +166,8 @@ nav {
 
   h3 {
     // font-family: "WoodlandUltralight";
-    font-family: "NeueMontrealLight";
+    font-family: "NeueMontreal";
+    font-weight: 200;
     font-size: 16px;
   }
 }
@@ -140,7 +187,8 @@ nav {
   }
 
   li {
-    font-family: "NeueMontrealLight";
+    font-family: "NeueMontreal";
+    font-weight: 200;
     font-size: 16px;
     color: #fff;
     width: fit-content;
@@ -211,10 +259,56 @@ nav {
 }
 
 #about {
-  height: 100vh;
-  background-color: white;
-  // position: sticky;
-  // top: 0;
+  min-height: 600px;
+  background-color: #fafffa;
+
+  h1 {
+    border-bottom: solid 1px red;
+    border-style: dotted;
+  }
+}
+
+.aboutLayout {
+  display: flex;
+}
+
+.aboutContent {
+  margin: 20px 40px;
+  width: 250px;
+  ul {
+    // padding: 20px;
+    // margin: 0 auto;
+    margin-bottom: 20px;
+    // border-bottom: 1px solid red;
+  }
+
+  h3 {
+    border-bottom: 1px solid red;
+    border-style: dotted;
+    line-height: 1.5;
+    // font-weight: 400;
+    font-style: italic;
+  }
+
+  li {
+    font-family: "NeueMontreal";
+    font-weight: 200;
+    font-size: 16px;
+    color: #000;
+    // width: fit-content;
+    margin: 0.3em 0;
+  }
+
+  p {
+    font-family: "NeueMontreal";
+    font-weight: 200;
+    font-size: 16px;
+    color: #000;
+    // width: fit-content;
+    margin: 0.3em 0;
+    line-height: 1.3;
+    padding: 3px 5px;
+  }
 }
 
 footer {
@@ -222,23 +316,17 @@ footer {
   height: 200px;
 
   ul {
-    padding: 3vh;
+    padding: 20px;
     margin: 0 auto;
   }
 
   li {
-    font-family: "NeueMontrealLight";
+    font-family: "NeueMontreal";
+    font-weight: 200;
     font-size: 16px;
     color: #fff;
     width: fit-content;
     margin: 0.5em;
-  }
-
-  p {
-    font-family: "NeueMontrealLight";
-    font-size: 16px;
-    color: #fff;
-    width: fit-content;
   }
 }
 
@@ -246,6 +334,7 @@ footer {
 @media screen and (max-height: 550px) {
   .project {
     position: relative;
+    height: 550px;
     // min height required for position sticky effect to work
   }
 }

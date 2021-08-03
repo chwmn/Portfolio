@@ -13,27 +13,60 @@
 
 //Migra
 @font-face {
-  font-family: "MigraExtraBold";
+  font-family: "Migra";
   src: url("/assets/fonts/Migra-Extrabold.woff2") format("woff2"),
     url("/assets/fonts/Migra-Extrabold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
 }
+
 @font-face {
-  font-family: "MigraRegular";
+  font-family: "Migra";
   src: url("/assets/fonts/Migra-Regular.woff2") format("woff2"),
     url("/assets/fonts/Migra-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Migra";
+  src: url("/assets/fonts/MigraItalic-Italic.woff2") format("woff2"),
+    url("/assets/fonts/MigraItalic-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
 }
 
 //Neue Montreal
 @font-face {
-  font-family: "NeueMontrealRegular";
+  font-family: "NeueMontreal";
   src: url("/assets/fonts/NeueMontreal-Regular.woff2") format("woff2"),
     url("/assets/fonts/NeueMontreal-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "NeueMontrealLight";
+  font-family: "NeueMontreal";
   src: url("/assets/fonts/NeueMontreal-Light.woff2") format("woff2"),
     url("/assets/fonts/NeueMontreal-Light.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("/assets/fonts/NeueMontreal-Italic.woff2") format("woff2"),
+    url("/assets/fonts/NeueMontreal-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("/assets/fonts/NeueMontreal-LightItalic.woff2") format("woff2"),
+    url("/assets/fonts/NeueMontreal-LightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
 }
 
 //PPWoodland

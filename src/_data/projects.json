@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "title": "CANVAS REDESIGN",
+      "date": "FALL 2020 / SUMMER 2021",
+      "tags": ["HTML", "SASS", "11ty"],
+      "link": "assets/images/CR01.png"
+    },
+    {
+      "title": "COMPUTER MUSEUM REDESIGN",
+      "date": "FALL 2020 / SUMMER 2021",
+      "tags": ["HTML", "SASS", "11ty"],
+      "link": "assets/images/CMR01.png"
+    },
+    {
+      "title": "VISUAL LIBRARY",
+      "date": "SPRING 2021",
+      "tags": ["HTML", "SASS", "JSON", "JS", "11ty"],
+      "link": "assets/images/VL01.png"
+    },
+    {
+      "title": "AGAINST THE GRAIN",
+      "date": "SPRING 2020",
+      "tags": ["HTML", "CSS", "SVG"],
+      "link": "assets/images/AtG01.png"
+    }
+  ]
+}

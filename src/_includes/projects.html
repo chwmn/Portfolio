@@ -1,0 +1,28 @@
+<div class="project">
+  <div class="worksTitle">
+    <h2>{{ item.title }}</h2>
+    <h3>{{ item.date }}</h3>
+  </div>
+  <div class="worksImage">
+    <div class="frame">
+      <div class="bar">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <img
+        src="{{ item.link }}"
+        alt="Canvas Redesign homepage"
+        class="homeImage"
+      />
+    </div>
+  </div>
+  <div class="worksInfo">
+    <ul>
+      {% assign tags = item.tags %} {% for item in item.tags %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <a class="worksButton" href="">SEE MORE →</a>
+</div>
