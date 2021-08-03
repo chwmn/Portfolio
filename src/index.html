@@ -26,8 +26,8 @@ layout: base.html
 
 <!-- projects id and project class are different in that projects is the whole and project is the individual works -->
 
-{% for projects in collections.projects %} {% include projects.html %} {% endfor
-%}
+{% for projects in collections.projects | sortByPageOrder%} {% include
+projects.html %} {% endfor %}
 
 <section id="about" class="content">
   <header>
