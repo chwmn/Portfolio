@@ -71,13 +71,15 @@
 
 //PPWoodland
 @font-face {
-  font-family: "WoodlandRegular";
+  font-family: "Woodland";
   src: url("/assets/fonts/PPWoodland-Regular.woff2") format("woff2"),
     url("/assets/fonts/PPWoodland-Regular.woff") format("woff");
+  font-weight: 600;
 }
 
 @font-face {
-  font-family: "WoodlandUltralight";
+  font-family: "Woodland";
   src: url("/assets/fonts/PPWoodland-Ultralight.woff2") format("woff2"),
     url("/assets/fonts/PPWoodland-Ultralight.woff") format("woff");
+  font-weight: 300;
 }
