@@ -4,8 +4,8 @@
     <h3>{{ item.data.semester }}</h3>
   </div>
   <div class="worksImage">
-    <div class="frame">
-      <div class="bar">
+    <div>
+      <div class="bar blackBoxShadow">
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
@@ -14,7 +14,7 @@
         <img
           src="{{ item.data.link }}"
           alt="Canvas Redesign homepage"
-          class="homeImage"
+          class="homeImage blackBoxShadow"
         />
       </a>
     </div>
@@ -26,5 +26,7 @@
       {% endfor %}
     </ul>
   </div>
-  <a class="worksButton" href="{{ item.url }}index.html">SEE MORE →</a>
+  <a class="worksButton whiteButton" href="{{ item.url }}index.html"
+    >SEE MORE →</a
+  >
 </div>

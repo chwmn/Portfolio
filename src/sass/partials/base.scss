@@ -155,13 +155,25 @@ body {
     margin: 10px 0;
   }
 
+  h5 {
+    font-family: "NeueMontreal";
+    font-size: 14px;
+    margin: 0.3em 0;
+    padding: 3px;
+    line-height: 1.3;
+    font-weight: 200;
+    text-align: center;
+    font-style: italic;
+  }
+
   p {
     font-family: "NeueMontreal";
     font-size: 18px;
     font-weight: 200;
-    // margin: 0.3em 0;
-    // padding: 3px 0;
+    margin: 0.3em 0;
+    padding: 3px 0;
     line-height: 1.3;
+    margin: 0.3em 0;
   }
 
   li {
@@ -183,8 +195,8 @@ body {
   // height: 100vh;
   display: grid;
   height: 100vh;
-  gap: 40px;
-  grid-template-rows: auto auto auto auto;
+  gap: 20px;
+  grid-template-rows: auto auto auto auto 20px;
   z-index: 0;
   // display: flex;
   // justify-content: space-between;
@@ -215,8 +227,8 @@ body {
 
 .worksInfo {
   margin: auto;
-  width: 100%;
-  display: flex;
+  width: 100px;
+  display: block;
   flex-wrap: wrap;
   align-content: space-between;
 
@@ -248,9 +260,7 @@ body {
   font-family: "Woodland";
   font-weight: 300;
   font-size: 24px;
-  color: #fff;
   text-decoration: none;
-  border: 1px solid #d6d6d6;
   padding: 15px 0 10px 0;
   display: block;
   width: 100%;
@@ -260,6 +270,16 @@ body {
   box-sizing: border-box;
   margin: 0 auto;
   z-index: 1;
+}
+
+.blackButton {
+  color: #000;
+  border: 1px solid #636363;
+}
+
+.whiteButton {
+  color: #fff;
+  border: 1px solid #d6d6d6;
 }
 
 .worksButton:hover {
@@ -278,12 +298,12 @@ body {
   align-self: center;
 
   .blackBoxShadow {
-    box-shadow: 0 5px 20px #000;
+    box-shadow: 0 0 30px 5px #000;
   }
 
-  .lightBoxShadow {
-    box-shadow: 0 5px 30px #e3ffe3;
-  }
+  // .lightBoxShadow {
+  //   box-shadow: 0 0 30px 5px #e3ffe3;
+  // }
 
   .homeImage {
     width: 100%;
@@ -309,8 +329,10 @@ body {
   box-sizing: border-box;
 }
 
+// extra pad for when the parent container cannot have a padding, ie the entry page cannot have padding so as to make the background image cover the whole page
+
 .bar {
-  height: 5%;
+  // height: 3%;
   border-top: 1px solid #636363;
   border-left: 1px solid #636363;
   border-right: 1px solid #636363;
@@ -320,12 +342,13 @@ body {
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
   border: 1px solid #636363;
   align-self: center;
-  margin: 5px 0 5px 5px;
+  margin: 3px 0 3px 3px;
+  z-index: 5;
 }
 
 .placeholder {
@@ -420,7 +443,7 @@ footer {
     width: 490px;
   }
 
-  .worksButton {
+  .whiteButton {
     width: 490px;
   }
 }

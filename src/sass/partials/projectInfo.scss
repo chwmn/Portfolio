@@ -31,15 +31,18 @@
   background-image: linear-gradient(#f2fff2, #fff);
   //   padding: 100px;
   position: sticky;
+  // height: calc(100vh - 45px);
   height: 100vh;
   display: grid;
   grid-template-rows: 60px 1fr;
+  // top: 45px;
   top: 0;
 }
 
 .projectTitle {
   display: flex;
-  height: fit-content;
+  height: 60px;
+  box-sizing: border-box;
   color: #000;
   justify-content: space-between;
   // width: 200px;
@@ -60,28 +63,76 @@
 
 .projectGrid {
   display: grid;
-  grid-template-columns: repeat(2, 500px);
-  gap: 100px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
   justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .infoGroup {
   //   width: 480px;
   align-self: center;
   color: #000;
-  margin: 0 auto;
+  margin: 0 auto 40px auto;
+  width: 100%;
+
+  h3 {
+    height: 40px;
+  }
 
   p {
-    font-weight: 200;
+    // font-family: "NeueMontreal";
+    // font-size: 18px;
+    // font-weight: 200;
+    // margin: 0.3em 0;
+    padding: 3px 0;
+    line-height: 1.3;
+    margin: 0.3em 0;
   }
 
   ol {
     // margin-left: 25px;
     padding: 0 10px;
     list-style-position: inside;
+    font-weight: 200;
 
     li {
-      list-style-type: circle;
+      // font-family: "NeueMontreal";
+      font-size: 18px;
+      margin: 0.3em 0;
+      padding: 3px;
+      line-height: 1.3;
+      list-style-type: disc;
     }
   }
 }
+
+.projectNav {
+  background-color: #f2fff2;
+  padding: 20px 20px 0 20px;
+  box-sizing: border-box;
+  height: 45px;
+  position: sticky;
+  top: 0;
+}
+
+@media screen and (max-width: 910px) {
+  .projectGrid {
+    display: block;
+    padding: 20px;
+  }
+
+  .projectInfo {
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+  }
+}
+
+// @media screen and (max-width: 1160px) {
+//   .projectGrid {
+//     gap: 50px;
+//     grid-template-columns: repeat(2, 400px);
+//   }
+// }
