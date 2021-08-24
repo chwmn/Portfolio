@@ -1,437 +1,140 @@
-html {
-  scroll-behavior: smooth;
+:root {
+  --site-padding: 20px;
 }
 
 body {
-  background-color: #000;
+  background-color: #363636;
 }
 
-.entry {
-  // background-color: #deffe9;
-  // background-color: #2d593e;
-  background-color: #26452e;
-  // background-image: linear-gradient(#26452e, #32593c);
-  // background-color: #486b51;
-  // background-color: #5862bf;
-  // background-color: #386944;
-  height: 90vh;
-  display: flex;
-  flex-wrap: wrap;
-  // align-content: space-between;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  z-index: 0;
-
-  p {
-    font-family: "NeueMontreal";
-    font-weight: 200;
-    font-size: 16px;
-    color: #fff;
-    // text-align: right;
-  }
-}
-
-.bioInfo {
-  width: 500px;
-  height: 233.511px;
-  margin: 0 auto;
-  background-image: url("/assets/svg/leaf03.svg");
-  background-position: center;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  // overflow: hidden;
-  justify-content: center;
-
+.container {
+  //global stylings for headers and p and li
+  color: #fff;
   h1 {
     font-family: "Migra";
-    font-weight: 400;
-    font-size: 64px;
-    padding-top: 40px;
-    // text-align: right;
+    font-size: 68px;
+    margin: 20px;
+    // font-style: italic;
     color: #fff;
   }
 
   h2 {
-    font-family: "Woodland";
-    font-weight: 300;
-    font-size: 24px;
-    // text-align: right;
+    font-family: "NeueMontreal", sans-serif;
+    font-weight: 400;
     color: #fff;
-    width: 300px;
-    // letter-spacing: -2.5px;
-  }
-}
-
-.navigation {
-  display: flex;
-}
-
-.navBar {
-  height: fit-content;
-  z-index: 1;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 20px;
-
-  ul {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    width: 100%;
   }
 
   li {
-    font-family: "NeueMontreal";
-    font-weight: 200;
-    font-size: 16px;
-    // letter-spacing: -2.5px;
+    font-family: "NeueMontreal", sans-serif;
     color: #fff;
-    width: fit-content;
-    align-self: center;
   }
 
   a {
+    font-family: "NeueMontreal", sans-serif;
+    font-weight: 200;
     color: #fff;
-    text-decoration: none;
+  }
+}
+
+// site_nav
+.site_nav {
+  padding-bottom: 10px;
+  margin: var(--site-padding);
+  border-bottom: 1px solid #fff;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  li a {
+    font-size: 20px;
+    font-weight: 400;
   }
 }
 
 .leafIcon {
-  color: #fff;
-  height: 25px;
+  width: 25px;
   img {
-    height: inherit;
+    width: inherit;
   }
 }
 
-.portrait {
-  width: 300px;
-  height: 350px;
-  transform: scale(120%);
-  object-fit: cover;
-  border-radius: 150px / 175px;
-  margin: 30px;
-}
-
-//WORKS
-
-#projects header {
-  background-color: black;
-
-  h1 {
-    color: #fff;
-  }
-}
-
+//content -> where all the project content goes
 .content {
-  header {
-    height: 80px;
-    display: flex;
-    // flex for aligning h1 in center
-  }
-
-  h1 {
-    align-self: center;
-    font-family: "Migra";
-    font-weight: 400;
-    font-size: 48px;
-    margin: 20px 20px 0 20px;
-  }
-
-  h2 {
-    align-self: center;
-    font-family: "Woodland";
-    font-weight: 300;
-    font-size: 36px;
-    margin: 20px 20px 0 20px;
-  }
-
-  h3 {
-    align-self: center;
-    font-family: "Woodland";
-    font-weight: 300;
-    font-size: 36px;
-    margin: 10px 0;
-  }
-
-  h5 {
-    font-family: "NeueMontreal";
-    font-size: 14px;
-    margin: 0.3em 0;
-    padding: 3px;
-    line-height: 1.3;
-    font-weight: 200;
-    text-align: center;
-    font-style: italic;
-  }
-
-  p {
-    font-family: "NeueMontreal";
-    font-size: 18px;
-    font-weight: 200;
-    margin: 0.3em 0;
-    padding: 3px 0;
-    line-height: 1.3;
-  }
-
-  li {
-    font-family: "NeueMontreal";
-    font-size: 18px;
-    margin: 0.3em 0;
-    padding: 3px;
-    line-height: 1.3;
-  }
-}
-
-.project {
-  padding: 20px 20px 70px 20px;
-  background-image: linear-gradient(#000, #212121);
-  box-sizing: border-box;
-  position: sticky;
-  top: 0;
-  // z-index: -1;
-  // height: 100vh;
-  display: grid;
-  height: 100vh;
-  gap: 20px;
-  grid-template-rows: auto auto auto auto 20px;
-  z-index: 0;
+  padding: 0 var(--site-padding);
   // display: flex;
-  // justify-content: space-between;
   // flex-wrap: wrap;
 }
 
-.worksTitle {
-  height: fit-content;
-  color: #fff;
-  // width: 200px;
+.project {
+  //variables for setting up the window bar thingy
+  --bar-height: 14px;
+  --image-width: calc(50vw - (var(--site-padding) * 2));
+  --image-height: calc((var(--image-width) * 16) / 31 + var(--bar-height));
+  --image-border-radius: 3px;
 
-  h2 {
-    // font-family: "MigraRegular";
-    font-family: "Woodland";
-    font-weight: 300;
-    font-size: 36px;
-    width: 200px;
-    margin-bottom: 20px;
-  }
-
-  h3 {
-    // font-family: "WoodlandUltralight";
-    font-family: "NeueMontreal";
-    font-weight: 200;
-    font-size: 16px;
-  }
+  width: var(--image-width);
+  margin-bottom: 40px;
 }
 
-.worksInfo {
-  margin: auto;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-
-  ul {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  li {
-    font-family: "NeueMontreal";
-    font-weight: 200;
-    font-size: 16px;
-    color: #fff;
-    width: fit-content;
-  }
-
-  h3 {
-    font-family: "NeueMontreal";
-    font-weight: 200;
-    font-size: 16px;
-    color: #fff;
-    margin: 20px auto;
-  }
-}
-
-.worksButton {
-  font-family: "Woodland";
-  font-weight: 300;
-  font-size: 24px;
-  text-decoration: none;
-  padding: 15px 0 10px 0;
-  display: block;
-  width: 100%;
-  text-align: center;
-  border-radius: 35px;
-  height: 50px;
+//worksImage -> images for works lol
+.projectImage {
+  width: var(--image-width);
+  // box-shadow: 0 0 10px 5px #ebebeb;
+  box-shadow: 2px 0 15px 5px #4f4f4f;
+  border-radius: var(--image-border-radius);
   box-sizing: border-box;
-  margin: 0 auto;
-  z-index: 1;
-}
+  height: var(--image-height);
 
-.blackButton {
-  color: #000;
-  border: 1px solid #636363;
-}
-
-.whiteButton {
-  color: #fff;
-  border: 1px solid #d6d6d6;
-}
-
-.worksButton:hover {
-  font-style: italic;
-}
-
-.worksImage {
-  // padding: 10px;
-  // border: 1px solid #636363;
-  // height: fit-content;
-  // border-radius: 5px;
-  // margin: 0 auto;
-  // width: 800px;
-  // width: 50vw;
-  margin: 0 auto;
-  align-self: center;
-
-  // .blackBoxShadow {
-  //   box-shadow: 0 0 30px 5px #000;
-  // }
-
-  // .lightBoxShadow {
-  //   box-shadow: 0 0 30px 5px #e3ffe3;
-  // }
-
-  .homeImage {
-    width: 100%;
+  img {
+    width: inherit;
     object-fit: cover;
-    border: 1px solid #636363;
+    height: calc(var(--image-height) - var(--bar-height));
     box-sizing: border-box;
-    border-radius: 0 0 1px 1px;
-    // height: 405px;
-    // height: 95%;
-  }
-
-  .projectPageImage {
-    width: 100%;
-    object-fit: cover;
-    border: 1px solid #636363;
-    box-sizing: border-box;
-    border-radius: 0 0 1px 1px;
+    border-radius: 0 0 var(--image-border-radius) var(--image-border-radius);
   }
 }
-
-.extraPad {
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-// extra pad for when the parent container cannot have a padding, ie the entry page cannot have padding so as to make the background image cover the whole page
 
 .bar {
-  // height: 3%;
-  border-top: 1px solid #636363;
-  border-left: 1px solid #636363;
-  border-right: 1px solid #636363;
-  border-radius: 1px 1px 0 0;
+  height: var(--bar-height);
+  background-color: #adadad;
+  border-bottom: 1px solid #363636;
+  border-radius: var(--image-border-radius) var(--image-border-radius) 0 0;
   display: flex;
-  box-sizing: border-box;
 }
 
 .dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 6px;
-  border: 1px solid #636363;
-  align-self: center;
-  margin: 3px 0 3px 3px;
-  z-index: 5;
+  width: calc(var(--bar-height) / 2);
+  height: calc(var(--bar-height) / 2);
+  border-radius: calc(var(--bar-height) / 4);
+  background-color: #363636;
+  margin-top: calc(var(--bar-height) / 4);
+  margin-left: calc(var(--bar-height) / 4);
 }
 
-.placeholder {
-  height: 100vh;
-  z-index: -1;
-}
-
-// .aboutContent::before {
-//   content: "";
-//   display: block;
-//   width: 50px;
-//   height: 50px;
-//   border-radius: 25px;
-//   // background-color: #ffd6c7;
-//   position: absolute;
-//   box-shadow: 0 0 50px #ffff0a;
-//   margin: 0 auto;
-//   top: -10px;
-//   left: -10px;
-//   z-index: -1;
-// }
-
-footer {
-  background-color: black;
-  height: 200px;
-  position: relative;
-  z-index: 99;
+//project -> indivual project slides i guess
+.projectInfo {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
 
   ul {
-    padding: 20px;
-    margin: 0 auto;
-  }
-
-  li {
-    font-family: "NeueMontreal";
-    font-weight: 200;
-    font-size: 16px;
-    color: #fff;
-    width: fit-content;
-    margin: 0.5em;
-  }
-}
-
-// media queries
-@media screen and (max-height: 550px) {
-  .project {
-    position: relative;
-    height: 550px;
-    // min height required for position sticky effect to work
-  }
-}
-
-// @media screen and (max-height: 530px) {
-//   .project {
-//     grid-template-rows: auto 2fr auto auto;
-//   }
-// }
-
-@media screen and (min-width: 530px) {
-  .worksTitle {
+    width: 50%;
     display: flex;
     justify-content: space-between;
   }
 
-  .worksImage {
-    .homeImage {
-      width: 490px;
-    }
-  }
-
-  .worksInfo {
-    width: 490px;
-  }
-
-  .whiteButton {
-    width: 490px;
+  li {
+    font-weight: 200;
   }
 }
 
-@media screen and (min-width: 730px) {
-  .worksImage {
-    .homeImage {
-      width: 690px;
-    }
-  }
+//see more button
+.seeMore {
+  padding: 10px;
+  display: block;
+  border: 1px dotted black;
+  border-radius: 20px;
+  width: fit-content;
 }
