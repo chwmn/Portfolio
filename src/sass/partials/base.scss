@@ -297,9 +297,9 @@ body {
   margin: 0 auto;
   align-self: center;
 
-  .blackBoxShadow {
-    box-shadow: 0 0 30px 5px #000;
-  }
+  // .blackBoxShadow {
+  //   box-shadow: 0 0 30px 5px #000;
+  // }
 
   // .lightBoxShadow {
   //   box-shadow: 0 0 30px 5px #e3ffe3;
@@ -356,52 +356,20 @@ body {
   z-index: -1;
 }
 
-#about {
-  min-height: 100vh;
-  background-color: #fafffa;
-  position: sticky;
-  z-index: 99999;
-
-  h1 {
-    // border-bottom: solid 1px red;
-    border-style: dotted;
-  }
-}
-
-.aboutLayout {
-  display: flex;
-  padding: 20px;
-}
-
-.aboutContent {
-  // margin: 20px 40px;
-  width: 250px;
-  border: 1px solid black;
-  padding: 0 12px;
-  position: relative;
-  ul {
-    // padding: 20px;
-    // margin: 0 auto;
-    margin-bottom: 20px;
-    // border-bottom: 1px solid red;
-  }
-
-  h3 {
-    // border-bottom: 1px solid red;
-    border-style: dotted;
-    line-height: 1.5;
-    // font-weight: 400;
-    font-style: italic;
-  }
-
-  img {
-    position: absolute;
-    display: block;
-    right: -10px;
-    bottom: -13px;
-    width: 30px;
-  }
-}
+// .aboutContent::before {
+//   content: "";
+//   display: block;
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 25px;
+//   // background-color: #ffd6c7;
+//   position: absolute;
+//   box-shadow: 0 0 50px #ffff0a;
+//   margin: 0 auto;
+//   top: -10px;
+//   left: -10px;
+//   z-index: -1;
+// }
 
 footer {
   background-color: black;

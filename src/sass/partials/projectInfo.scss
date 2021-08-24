@@ -28,7 +28,8 @@
 
 .projectInfo {
   //   background-color: #fafffa;
-  background-image: linear-gradient(#f2fff2, #fff);
+  // background-image: linear-gradient(#f2fff2, #fff);
+  background-color: #fff;
   //   padding: 100px;
   position: sticky;
   // height: calc(100vh - 45px);
@@ -43,8 +44,9 @@
   display: flex;
   height: 60px;
   box-sizing: border-box;
-  color: #000;
+  color: #fff;
   justify-content: space-between;
+  background-color: #000;
   // width: 200px;
 
   h4 {
@@ -63,8 +65,8 @@
 
 .projectGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(2, 400px);
+  gap: calc((100vw - 800px) / 3);
   justify-content: center;
   padding: 20px;
   box-sizing: border-box;
@@ -110,7 +112,7 @@
 
 .fixedHeight {
   // align-self: flex-start;
-  height: 250px;
+  height: 400px;
 }
 
 .projectNav {
@@ -126,12 +128,24 @@
   .projectGrid {
     display: block;
     padding: 20px;
+    width: 500px;
+    margin: 0 auto;
   }
 
   .projectInfo {
     position: relative;
     min-height: 100vh;
     height: 100%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .projectGrid {
+    width: 100%;
+  }
+
+  .fixedHeight {
+    height: 500px;
   }
 }
 
