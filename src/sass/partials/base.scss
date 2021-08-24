@@ -68,31 +68,31 @@ body {
 }
 
 .project {
-  //variables for setting up the window bar thingy
-  --bar-height: 14px;
-  --image-width: calc(50vw - (var(--site-padding) * 2));
-  --image-height: calc((var(--image-width) * 16) / 31 + var(--bar-height));
-  --image-border-radius: 3px;
-
-  width: var(--image-width);
-  margin-bottom: 40px;
+  display: flex;
 }
 
 //worksImage -> images for works lol
 .projectImage {
+  //variables for setting up the window bar thingy
+  --bar-height: 14px;
+  --image-width: 400px;
+  --image-height: calc((var(--image-width) * 16) / 31 + var(--bar-height));
+  --image-border-radius: 3px;
   width: var(--image-width);
   // box-shadow: 0 0 10px 5px #ebebeb;
-  box-shadow: 2px 0 15px 5px #4f4f4f;
-  border-radius: var(--image-border-radius);
+  // box-shadow: 2px 0 15px 5px #4f4f4f;
+
+  // border-radius: var(--image-border-radius);
   box-sizing: border-box;
-  height: var(--image-height);
+  // height: var(--image-height);
+  height: calc(var(--image-height) - var(--bar-height));
 
   img {
     width: inherit;
     object-fit: cover;
     height: calc(var(--image-height) - var(--bar-height));
     box-sizing: border-box;
-    border-radius: 0 0 var(--image-border-radius) var(--image-border-radius);
+    // border-radius: 0 0 var(--image-border-radius) var(--image-border-radius);
   }
 }
 
@@ -115,19 +115,9 @@ body {
 
 //project -> indivual project slides i guess
 .projectInfo {
-  margin: 10px 0;
+  // margin: 10px 0;
   display: flex;
   justify-content: space-between;
-
-  ul {
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  li {
-    font-weight: 200;
-  }
 }
 
 //see more button
