@@ -33,49 +33,70 @@ body {
     font-weight: 200;
     color: #fff;
   }
+
+  p {
+    font-family: "NeueMontreal", sans-serif;
+    font-weight: 200;
+    color: #fff;
+  }
 }
 
 // site_nav
 .site_nav {
-  padding-bottom: 10px;
-  margin: var(--site-padding);
-  border-bottom: 1px solid #fff;
+  padding: var(--site-padding) var(--site-padding) calc(var(--site-padding) / 2)
+    var(--site-padding);
+  box-sizing: border-box;
+  border-bottom: 1px dotted #fff;
+  width: 100%;
+  height: 56px;
 
   ul {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-content: center;
+    width: 100%;
   }
 
-  li a {
-    font-size: 20px;
-    font-weight: 400;
+  li {
+    a {
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    width: calc((100vw - (var(--site-padding) * 2)) / 4);
   }
 }
 
+.alignRight {
+  text-align: right;
+}
+
 .leafIcon {
-  width: 25px;
+  height: 20px;
+  text-align: left;
+
   img {
-    width: inherit;
+    height: inherit;
   }
 }
 
 //content -> where all the project content goes
-.content {
-  padding: 0 var(--site-padding);
-  // display: flex;
-  // flex-wrap: wrap;
-}
+// .content {
+//   // padding: 0 var(--site-padding);
+//   // display: flex;
+//   // flex-wrap: wrap;
+// }
 
 .project {
-  display: flex;
+  // display: flex;
+  margin: 10px 20px 10px 20px;
 }
 
 //worksImage -> images for works lol
 .projectImage {
   //variables for setting up the window bar thingy
   --bar-height: 14px;
-  --image-width: 400px;
+  --image-width: calc((100vw - (var(--site-padding) * 2)) / 4);
   --image-height: calc((var(--image-width) * 16) / 31 + var(--bar-height));
   --image-border-radius: 3px;
   width: var(--image-width);
@@ -86,6 +107,8 @@ body {
   box-sizing: border-box;
   // height: var(--image-height);
   height: calc(var(--image-height) - var(--bar-height));
+  // margin-right: 20px;
+  margin: 8px 0;
 
   img {
     width: inherit;
@@ -115,16 +138,161 @@ body {
 
 //project -> indivual project slides i guess
 .projectInfo {
-  // margin: 10px 0;
   display: flex;
-  justify-content: space-between;
+  align-content: center;
+  // margin: 10px 0;
+  border-bottom: 1px dotted #fff;
+
+  h2 {
+    height: fit-content;
+    line-height: 1.5;
+    font-size: 20px;
+    width: calc((100vw - (var(--site-padding) * 2)) / 4);
+  }
+
+  p {
+    width: calc((100vw - (var(--site-padding) * 2)) / 4);
+    letter-spacing: 0.4px;
+    line-height: 1.1;
+    padding: 5px;
+    box-sizing: border-box;
+  }
 }
 
-//see more button
-.seeMore {
-  padding: 10px;
+.projectHead {
+  align-self: flex-end;
+}
+
+.projectDescript {
+  display: flex;
+  width: calc((100vw - (var(--site-padding) * 2)) / 2);
+}
+
+.projectSection {
+  width: calc((100vw - (var(--site-padding) * 2)) / 4);
+  position: relative;
+}
+
+// .plus {
+//   // align-self: flex-end;
+//   position: absolute;
+//   bottom: 0;
+//   right: 0;
+//   margin: 8px 0;
+//   width: 30px;
+//   height: 30px;
+// }
+
+.plus {
+  width: 30px;
+  height: 30px;
+  bottom: 7px;
+  right: 0;
+  position: absolute;
+}
+
+.plus:before,
+.plus:after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  margin: 14px 0;
+  // transform: rotate(90deg);
+  position: absolute;
+}
+
+// .open:before {
+//   // transform: rotate(180deg);
+// }
+
+.open:after {
+  transform: rotate(90deg);
+  animation-name: rotateOpen;
+  animation-duration: 0.5s;
+}
+
+.close:after {
+  transform: rotate(180deg);
+  animation-name: rotateClose;
+  animation-duration: 0.5s;
+}
+
+// .horizontal {
+//   width: 30px;
+//   height: 2px;
+//   background-color: #fff;
+//   position: absolute;
+//   margin: 14px 0;
+//   content: "";
+// }
+
+// .vertical {
+//   width: 30px;
+//   height: 2px;
+//   background-color: #fff;
+//   position: absolute;
+//   margin: 14px 0;
+//   transform: rotate(90deg);
+// }
+
+//for the javascript hidden thingy
+.hidden {
+  // display: none;
+  opacity: 0;
+  animation-name: hid;
+  animation-duration: 0.5s;
+  height: 0;
+}
+
+.shown {
   display: block;
-  border: 1px dotted black;
-  border-radius: 20px;
-  width: fit-content;
+  animation-name: shown;
+  animation-duration: 0.2s;
+  opacity: 1;
+  height: 200px;
+}
+
+@keyframes shown {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+
+  100% {
+    opacity: 1;
+    height: 200px;
+  }
+}
+
+@keyframes hid {
+  0% {
+    opacity: 1;
+    height: 200px;
+  }
+
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+@keyframes rotateOpen {
+  from {
+    transform: rotate(180deg);
+  }
+
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes rotateClose {
+  from {
+    transform: rotate(90deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
 }
