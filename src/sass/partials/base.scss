@@ -10,6 +10,8 @@ body {
 .container {
   //global stylings for headers and p and li
   color: #fff;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
 
   h1 {
     font-family: "Migra";
@@ -40,7 +42,6 @@ body {
   p {
     font-family: "NeueMontreal", sans-serif;
     font-weight: 200;
-    color: #fff;
   }
 }
 
@@ -90,7 +91,7 @@ body {
 }
 
 //the whole projects section
-#projects {
+.projectSection {
   h1 {
     margin: 20px;
     color: #fff;
@@ -161,14 +162,13 @@ body {
 .projectDescript {
   display: flex;
   width: calc(var(--column-width) * 2);
-  letter-spacing: 0.5px;
-  line-height: 1.1;
 
   p {
     width: var(--column-width);
     padding: 15px 30px 15px 0;
     font-size: 16px;
     box-sizing: border-box;
+    color: #fff;
   }
 
   ul {
@@ -210,14 +210,38 @@ body {
   font-style: italic;
 }
 
-#about {
-  height: 700px;
+.about {
+  // height: 700px;
   // background-color: #f5fff8;
   background-color: #fff;
-  padding: 20px;
+  // padding: 20px;
 
   h1 {
     color: #000;
+    margin: 20px 20px 0 20px;
+    padding-top: 20px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+.aboutContent {
+  display: flex;
+  // margin: var(--site-padding);
+}
+
+.aboutInfo {
+  height: 550px;
+  width: var(--column-width);
+  border: 1px dotted black;
+  margin: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  img {
+    width: 100%;
   }
 }
 
