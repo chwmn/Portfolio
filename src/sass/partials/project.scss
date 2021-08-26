@@ -20,14 +20,15 @@
   box-sizing: border-box;
   height: var(--image-height);
   width: var(--image-width);
+  overflow: hidden;
   // box-shadow: 0 0 10px 5px #ebebeb;
   // box-shadow: 2px 0 15px 5px #4f4f4f;
 
   img {
     box-sizing: border-box;
-    height: inherit;
     object-fit: cover;
-    width: inherit;
+    height: var(--image-height);
+    width: var(--image-width);
   }
 
   a {
@@ -103,7 +104,7 @@
 }
 
 //process button -> see more button
-.seeMore {
+.seeProcess {
   background-color: #fff;
   border-radius: 25px;
   bottom: 8px;
@@ -119,6 +120,6 @@
   width: 160px;
 }
 
-.seeMore:hover {
+.seeProcess:hover {
   font-style: italic;
 }
