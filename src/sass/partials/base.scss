@@ -3,6 +3,10 @@
   --column-width: calc((100vw - (var(--site-padding) * 2)) / 4);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #363636;
 }
@@ -41,7 +45,6 @@ body {
 
   p {
     font-family: "NeueMontreal", sans-serif;
-    font-weight: 200;
   }
 }
 
@@ -89,6 +92,23 @@ body {
     height: inherit;
   }
 }
+
+//site title where my name is
+// .title {
+//   height: 150px;
+//   background-color: #fff;
+//   margin: var(--site-padding);
+//   display: flex;
+//   justify-content: center;
+
+//   h1 {
+//     align-self: center;
+//     font-family: "NeueMontreal", sans-serif;
+//     font-size: 20px;
+//     letter-spacing: 0;
+//     font-weight: 600;
+//   }
+// }
 
 //the whole projects section
 .projectSection {
@@ -168,6 +188,7 @@ body {
     padding: 15px 30px 15px 0;
     font-size: 16px;
     box-sizing: border-box;
+    font-weight: 200;
     color: #fff;
   }
 
@@ -224,6 +245,7 @@ body {
 
   p {
     font-size: 20px;
+    font-weight: 400;
   }
 }
 
@@ -259,89 +281,5 @@ body {
     margin: 10px 0;
     font-size: 16px;
     font-weight: 200;
-  }
-}
-
-//responsive stuff @ 950px -> 3 columns
-@media all and (max-width: 950px) {
-  :root {
-    --column-width: calc((100vw - (var(--site-padding) * 2)) / 3);
-  }
-
-  .projectHead {
-    width: 100%;
-  }
-
-  .nav {
-    text-align: right;
-  }
-
-  .homeNav {
-    position: absolute;
-    width: fit-content;
-  }
-}
-
-//responsive stuff @ 760px -> 2 columns
-@media all and (max-width: 760px) {
-  :root {
-    --column-width: calc((100vw - (var(--site-padding) * 2)) / 2);
-  }
-
-  .nav {
-    text-align: right;
-    width: 100%;
-  }
-
-  .homeNav {
-    position: absolute;
-    width: fit-content;
-  }
-
-  .projectPlus {
-    width: calc(var(--column-width) * 2);
-  }
-
-  .seeMore {
-    left: var(--column-width);
-  }
-}
-
-//responsive stuff @ 520px -> 1 columns
-@media all and (max-width: 520px) {
-  :root {
-    --column-width: calc(100vw - (var(--site-padding) * 2));
-  }
-
-  .nav {
-    text-align: right;
-    width: 100%;
-  }
-
-  .projectDescript {
-    flex-wrap: wrap;
-    width: var(--column-width);
-  }
-
-  .homeNav {
-    position: absolute;
-    width: fit-content;
-  }
-
-  .projectPlus {
-    width: var(--column-width);
-    margin-top: 5px;
-  }
-
-  .seeMore {
-    position: relative;
-  }
-
-  .seeMore {
-    left: 0;
-  }
-
-  .site_footer ul {
-    width: calc(var(--column-width) / 2);
   }
 }
