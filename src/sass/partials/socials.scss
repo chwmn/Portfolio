@@ -1,0 +1,86 @@
+:root {
+  --socials-color: black;
+  --socials-line-color: #fafffa;
+}
+
+.socials a:hover {
+  --socials-color: blue;
+}
+
+.socials {
+  ul {
+    display: flex;
+    margin: 0 auto;
+    width: 200px;
+    justify-content: space-between;
+  }
+}
+
+// instagram link
+.ig {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--socials-color);
+  background-color: var(--socials-color);
+  border-radius: 13px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.ig::before {
+  content: "";
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  width: 25px;
+  height: 25px;
+  border: 3px solid var(--socials-line-color);
+  background-color: var(--socials-color);
+  margin: 9.5px;
+  border-radius: 12.5px;
+}
+
+.ig::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: var(--socials-line-color);
+  top: 5px;
+  right: 5px;
+  border-radius: 3px;
+}
+
+// LinkedIn link
+.lin {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: var(--socials-color);
+  border-radius: 13px;
+  position: relative;
+  box-sizing: border-box;
+  color: var(--socials-line-color);
+  text-decoration: none;
+  text-align: center;
+  font-size: 36px;
+  line-height: 47px;
+}
+
+// Behance link
+.be {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: var(--socials-color);
+  border-radius: 13px;
+  position: relative;
+  box-sizing: border-box;
+  color: var(--socials-line-color);
+  text-decoration: none;
+  text-align: center;
+  font-size: 30px;
+  line-height: 49px;
+}

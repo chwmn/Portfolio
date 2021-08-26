@@ -1,469 +1,347 @@
-html {
-  scroll-behavior: smooth;
+:root {
+  --site-padding: 20px;
+  --column-width: calc((100vw - (var(--site-padding) * 2)) / 4);
 }
 
 body {
-  background-color: #000;
+  background-color: #363636;
 }
 
-.entry {
-  // background-color: #deffe9;
-  // background-color: #2d593e;
-  background-color: #26452e;
-  // background-image: linear-gradient(#26452e, #32593c);
-  // background-color: #486b51;
-  // background-color: #5862bf;
-  // background-color: #386944;
-  height: 90vh;
-  display: flex;
-  flex-wrap: wrap;
-  // align-content: space-between;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  z-index: 0;
-
-  p {
-    font-family: "NeueMontreal";
-    font-weight: 200;
-    font-size: 16px;
-    color: #fff;
-    // text-align: right;
-  }
-}
-
-.bioInfo {
-  width: 500px;
-  height: 233.511px;
-  margin: 0 auto;
-  background-image: url("/assets/svg/leaf03.svg");
-  background-position: center;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  // overflow: hidden;
-  justify-content: center;
+.container {
+  //global stylings for headers and p and li
+  color: #fff;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
 
   h1 {
     font-family: "Migra";
-    font-weight: 400;
-    font-size: 64px;
-    padding-top: 40px;
-    // text-align: right;
-    color: #fff;
+    font-size: 68px;
   }
 
   h2 {
-    font-family: "Woodland";
-    font-weight: 300;
-    font-size: 24px;
-    // text-align: right;
+    font-family: "NeueMontreal", sans-serif;
+    font-weight: 400;
     color: #fff;
-    width: 300px;
-    // letter-spacing: -2.5px;
   }
-}
 
-.navigation {
-  display: flex;
-}
-
-.navBar {
-  height: fit-content;
-  z-index: 1;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 20px;
-
-  ul {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    width: 100%;
+  h3 {
+    font-family: "NeueMontreal", sans-serif;
+    font-weight: 200;
+    color: #fff;
   }
 
   li {
-    font-family: "NeueMontreal";
-    font-weight: 200;
-    font-size: 16px;
-    // letter-spacing: -2.5px;
+    font-family: "NeueMontreal", sans-serif;
     color: #fff;
-    width: fit-content;
-    align-self: center;
   }
 
   a {
-    color: #fff;
-    text-decoration: none;
+    font-family: "NeueMontreal", sans-serif;
+  }
+
+  p {
+    font-family: "NeueMontreal", sans-serif;
+    font-weight: 200;
   }
 }
 
+// site_nav
+.site_nav {
+  padding: var(--site-padding) var(--site-padding)
+    calc(var(--site-padding) * 0.75) var(--site-padding);
+  box-sizing: border-box;
+  border-bottom: 1px dotted #fff;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  li {
+    margin: 5px 0;
+    a {
+      font-size: 20px;
+      font-weight: 400;
+      color: #fff;
+    }
+  }
+}
+
+.homeNav {
+  box-sizing: border-box;
+  width: var(--column-width);
+}
+
+.nav {
+  box-sizing: border-box;
+  width: var(--column-width);
+}
+
+.alignRight {
+  text-align: right;
+}
+
 .leafIcon {
-  color: #fff;
-  height: 25px;
+  height: 20px;
+  text-align: left;
+
   img {
     height: inherit;
   }
 }
 
-.portrait {
-  width: 300px;
-  height: 350px;
-  transform: scale(120%);
-  object-fit: cover;
-  border-radius: 150px / 175px;
-  margin: 30px;
-}
-
-//WORKS
-
-#projects header {
-  background-color: black;
-
+//the whole projects section
+.projectSection {
   h1 {
+    margin: 20px;
     color: #fff;
   }
 }
 
-.content {
-  header {
-    height: 80px;
-    display: flex;
-    // flex for aligning h1 in center
-  }
-
-  h1 {
-    align-self: center;
-    font-family: "Migra";
-    font-weight: 400;
-    font-size: 48px;
-    margin: 20px 20px 0 20px;
-  }
-
-  h2 {
-    align-self: center;
-    font-family: "Woodland";
-    font-weight: 300;
-    font-size: 36px;
-    margin: 20px 20px 0 20px;
-  }
-
-  h3 {
-    align-self: center;
-    font-family: "Woodland";
-    font-weight: 300;
-    font-size: 36px;
-    margin: 10px 0;
-  }
-
-  h5 {
-    font-family: "NeueMontreal";
-    font-size: 14px;
-    margin: 0.3em 0;
-    padding: 3px;
-    line-height: 1.3;
-    font-weight: 200;
-    text-align: center;
-    font-style: italic;
-  }
-
-  p {
-    font-family: "NeueMontreal";
-    font-size: 18px;
-    font-weight: 200;
-    margin: 0.3em 0;
-    padding: 3px 0;
-    line-height: 1.3;
-  }
-
-  li {
-    font-family: "NeueMontreal";
-    font-size: 18px;
-    margin: 0.3em 0;
-    padding: 3px;
-    line-height: 1.3;
-  }
-}
-
+//individual projects
 .project {
-  padding: 20px 20px 70px 20px;
-  background-image: linear-gradient(#000, #212121);
+  margin: var(--site-padding);
+}
+
+//worksImage -> images for works lol
+.projectImage {
+  //variables for width and height to get same ratio always
+  --image-width: var(--column-width);
+  --image-height: calc((var(--image-width) * 16) / 31);
+
+  width: var(--image-width);
   box-sizing: border-box;
-  position: sticky;
-  top: 0;
-  // z-index: -1;
-  // height: 100vh;
-  display: grid;
-  height: 100vh;
-  gap: 20px;
-  grid-template-rows: auto auto auto auto 20px;
-  z-index: 0;
-  // display: flex;
-  // justify-content: space-between;
-  // flex-wrap: wrap;
-}
+  height: var(--image-height);
+  // box-shadow: 0 0 10px 5px #ebebeb;
+  // box-shadow: 2px 0 15px 5px #4f4f4f;
 
-.worksTitle {
-  height: fit-content;
-  color: #fff;
-  // width: 200px;
-
-  h2 {
-    // font-family: "MigraRegular";
-    font-family: "Woodland";
-    font-weight: 300;
-    font-size: 36px;
-    width: 200px;
-    margin-bottom: 20px;
+  img {
+    width: inherit;
+    object-fit: cover;
+    height: inherit;
+    box-sizing: border-box;
   }
 
-  h3 {
-    // font-family: "WoodlandUltralight";
-    font-family: "NeueMontreal";
-    font-weight: 200;
-    font-size: 16px;
+  a {
+    width: inherit;
+    height: inherit;
   }
 }
 
-.worksInfo {
-  margin: auto;
-  width: 100%;
+//project -> indivual project slides i guess
+//project info
+//-->projectHead
+//-->projectDescript
+//-->projectPlus
+.projectInfo {
   display: flex;
   flex-wrap: wrap;
-  align-content: space-between;
+  border-bottom: 1px dotted #fff;
+}
+
+.projectHead {
+  // align-self: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--column-width);
+  margin: 10px 0;
+
+  h3 {
+    padding: 5px 0 0 0;
+  }
+
+  h2 {
+    height: fit-content;
+    line-height: 1.5;
+    font-size: 20px;
+    width: var(--column-width);
+    align-self: flex-end;
+  }
+}
+
+.projectDescript {
+  display: flex;
+  width: calc(var(--column-width) * 2);
+
+  p {
+    width: var(--column-width);
+    padding: 15px 30px 15px 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: #fff;
+  }
 
   ul {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    width: 100%;
+    padding: 15px 30px 15px 0;
+    // width: calc((100vw - (var(--site-padding) * 2)) / 4);
+    box-sizing: border-box;
   }
 
   li {
-    font-family: "NeueMontreal";
     font-weight: 200;
-    font-size: 16px;
-    color: #fff;
-    width: fit-content;
-  }
-
-  h3 {
-    font-family: "NeueMontreal";
-    font-weight: 200;
-    font-size: 16px;
-    color: #fff;
-    margin: 20px auto;
   }
 }
 
-.worksButton {
-  font-family: "Woodland";
-  font-weight: 300;
-  font-size: 24px;
-  text-decoration: none;
-  padding: 15px 0 10px 0;
+.projectPlus {
+  width: var(--column-width);
+  position: relative;
+  display: flex;
+  align-self: flex-end;
+}
+
+//process button -> see more button
+.seeMore {
   display: block;
-  width: 100%;
+  padding: 8px;
+  height: 34px;
   text-align: center;
-  border-radius: 35px;
-  height: 50px;
   box-sizing: border-box;
-  margin: 0 auto;
-  z-index: 1;
+  background-color: #fff;
+  color: #000000;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 8px;
+  width: 160px;
+  font-weight: 400;
+  font-size: 16px;
 }
 
-.blackButton {
-  color: #000;
-  border: 1px solid #636363;
-}
-
-.whiteButton {
-  color: #fff;
-  border: 1px solid #d6d6d6;
-}
-
-.worksButton:hover {
+.seeMore:hover {
   font-style: italic;
 }
 
-.worksImage {
-  // padding: 10px;
-  // border: 1px solid #636363;
-  // height: fit-content;
-  // border-radius: 5px;
-  // margin: 0 auto;
-  // width: 800px;
-  // width: 50vw;
-  margin: 0 auto;
-  align-self: center;
-
-  .blackBoxShadow {
-    box-shadow: 0 0 30px 5px #000;
-  }
-
-  // .lightBoxShadow {
-  //   box-shadow: 0 0 30px 5px #e3ffe3;
-  // }
-
-  .homeImage {
-    width: 100%;
-    object-fit: cover;
-    border: 1px solid #636363;
-    box-sizing: border-box;
-    border-radius: 0 0 1px 1px;
-    // height: 405px;
-    // height: 95%;
-  }
-
-  .projectPageImage {
-    width: 100%;
-    object-fit: cover;
-    border: 1px solid #636363;
-    box-sizing: border-box;
-    border-radius: 0 0 1px 1px;
-  }
-}
-
-.extraPad {
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-// extra pad for when the parent container cannot have a padding, ie the entry page cannot have padding so as to make the background image cover the whole page
-
-.bar {
-  // height: 3%;
-  border-top: 1px solid #636363;
-  border-left: 1px solid #636363;
-  border-right: 1px solid #636363;
-  border-radius: 1px 1px 0 0;
-  display: flex;
-  box-sizing: border-box;
-}
-
-.dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 6px;
-  border: 1px solid #636363;
-  align-self: center;
-  margin: 3px 0 3px 3px;
-  z-index: 5;
-}
-
-.placeholder {
-  height: 100vh;
-  z-index: -1;
-}
-
-#about {
-  min-height: 100vh;
-  background-color: #fafffa;
-  position: sticky;
-  z-index: 99999;
+.about {
+  // height: 700px;
+  // background-color: #f5fff8;
+  background-color: #fff;
+  // padding: 20px;
 
   h1 {
-    // border-bottom: solid 1px red;
-    border-style: dotted;
+    color: #000;
+    margin: 20px 20px 0 20px;
+    padding-top: 20px;
   }
-}
 
-.aboutLayout {
-  display: flex;
-  padding: 20px;
+  p {
+    font-size: 20px;
+  }
 }
 
 .aboutContent {
-  // margin: 20px 40px;
-  width: 250px;
-  border: 1px solid black;
-  padding: 0 12px;
-  position: relative;
-  ul {
-    // padding: 20px;
-    // margin: 0 auto;
-    margin-bottom: 20px;
-    // border-bottom: 1px solid red;
-  }
+  display: flex;
+  // margin: var(--site-padding);
+}
 
-  h3 {
-    // border-bottom: 1px solid red;
-    border-style: dotted;
-    line-height: 1.5;
-    // font-weight: 400;
-    font-style: italic;
-  }
+.aboutInfo {
+  height: 550px;
+  width: var(--column-width);
+  border: 1px dotted black;
+  margin: 20px;
+  padding: 10px;
+  box-sizing: border-box;
 
   img {
-    position: absolute;
-    display: block;
-    right: -10px;
-    bottom: -13px;
-    width: 30px;
+    width: 100%;
   }
 }
 
-footer {
-  background-color: black;
-  height: 200px;
-  position: relative;
-  z-index: 99;
+.site_footer {
+  margin: var(--site-padding);
+  display: flex;
+  justify-content: flex-end;
 
   ul {
-    padding: 20px;
-    margin: 0 auto;
+    // width: calc((100vw - (var(--site-padding) * 2)) / 2);
+    width: var(--column-width);
   }
 
   li {
-    font-family: "NeueMontreal";
-    font-weight: 200;
+    margin: 10px 0;
     font-size: 16px;
-    color: #fff;
+    font-weight: 200;
+  }
+}
+
+//responsive stuff @ 950px -> 3 columns
+@media all and (max-width: 950px) {
+  :root {
+    --column-width: calc((100vw - (var(--site-padding) * 2)) / 3);
+  }
+
+  .projectHead {
+    width: 100%;
+  }
+
+  .nav {
+    text-align: right;
+  }
+
+  .homeNav {
+    position: absolute;
     width: fit-content;
-    margin: 0.5em;
   }
 }
 
-// media queries
-@media screen and (max-height: 550px) {
-  .project {
+//responsive stuff @ 760px -> 2 columns
+@media all and (max-width: 760px) {
+  :root {
+    --column-width: calc((100vw - (var(--site-padding) * 2)) / 2);
+  }
+
+  .nav {
+    text-align: right;
+    width: 100%;
+  }
+
+  .homeNav {
+    position: absolute;
+    width: fit-content;
+  }
+
+  .projectPlus {
+    width: calc(var(--column-width) * 2);
+  }
+
+  .seeMore {
+    left: var(--column-width);
+  }
+}
+
+//responsive stuff @ 520px -> 1 columns
+@media all and (max-width: 520px) {
+  :root {
+    --column-width: calc(100vw - (var(--site-padding) * 2));
+  }
+
+  .nav {
+    text-align: right;
+    width: 100%;
+  }
+
+  .projectDescript {
+    flex-wrap: wrap;
+    width: var(--column-width);
+  }
+
+  .homeNav {
+    position: absolute;
+    width: fit-content;
+  }
+
+  .projectPlus {
+    width: var(--column-width);
+    margin-top: 5px;
+  }
+
+  .seeMore {
     position: relative;
-    height: 550px;
-    // min height required for position sticky effect to work
-  }
-}
-
-// @media screen and (max-height: 530px) {
-//   .project {
-//     grid-template-rows: auto 2fr auto auto;
-//   }
-// }
-
-@media screen and (min-width: 530px) {
-  .worksTitle {
-    display: flex;
-    justify-content: space-between;
   }
 
-  .worksImage {
-    .homeImage {
-      width: 490px;
-    }
+  .seeMore {
+    left: 0;
   }
 
-  .worksInfo {
-    width: 490px;
-  }
-
-  .whiteButton {
-    width: 490px;
-  }
-}
-
-@media screen and (min-width: 730px) {
-  .worksImage {
-    .homeImage {
-      width: 690px;
-    }
+  .site_footer ul {
+    width: calc(var(--column-width) / 2);
   }
 }
