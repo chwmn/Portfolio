@@ -1,9 +1,9 @@
 //KEYFRAMES FOR THE PLUS MINUS BUTTON AND STYLING FOR THE INTERACTION
 
 //plus javascript stuff
-:root {
-  --content-height: 200px;
-}
+// :root {
+//   --content-height: 200px;
+// }
 
 //styling plus box
 .plus {
@@ -44,6 +44,7 @@
   animation-duration: 0.2s;
   max-height: 0;
   opacity: 0;
+  margin-bottom: 0;
 }
 
 .shown {
@@ -51,8 +52,9 @@
   animation-name: shown;
   // height: var(--content-height);
   height: auto;
-  min-height: 150px;
+  // min-height: 200px;
   max-height: 500px;
+  margin-bottom: 20px;
   // height: 120%;
   opacity: 1;
 }
@@ -60,29 +62,33 @@
 //animations for show and hide, display becomes none and opacity changes, height shrinks too and this works because of overflow:hidden
 @keyframes shown {
   0% {
-    min-height: 0;
+    // min-height: 0;
     max-height: 0;
     opacity: 0;
+    margin-bottom: 0;
   }
 
   100% {
-    min-height: 150px;
+    // min-height: 150px;
     max-height: 500px;
     opacity: 1;
+    margin-bottom: 20px;
   }
 }
 
 @keyframes hid {
   0% {
-    min-height: 150px;
+    // min-height: 150px;
     max-height: 500px;
     opacity: 1;
+    margin-bottom: 20px;
   }
 
   100% {
-    min-height: 0;
+    // min-height: 0;
     max-height: 0;
     opacity: 0;
+    margin-bottom: 0;
   }
 }
 
