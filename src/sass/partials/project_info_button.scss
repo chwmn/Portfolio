@@ -27,13 +27,13 @@
 
 //^^now in plus position
 .open:after {
-  animation-duration: 0.2s;
+  animation-duration: 0.1s;
   animation-name: rotateOpen;
   transform: rotate(90deg);
 }
 
 .close:after {
-  animation-duration: 0.2s;
+  animation-duration: 0.1s;
   animation-name: rotateClose;
   transform: rotate(180deg);
 }
@@ -41,14 +41,14 @@
 //for the javascript hidden thingy -> gets applied to elements with .info within .projectDescript
 .hidden {
   animation-name: hid;
-  animation-duration: 0.2s;
+  animation-duration: 0.1s;
   max-height: 0;
   opacity: 0;
   margin-bottom: 0;
 }
 
 .shown {
-  animation-duration: 0.2s;
+  animation-duration: 0.1s;
   animation-name: shown;
   // height: var(--content-height);
   height: auto;
