@@ -74,8 +74,18 @@
     grid-row: 1 / 2;
   }
 
+  //in order to keep this line in the same line as the title, it is made absolute, for this reason, it will no longer be fit to grid but put in place using the width method, for both this query as well as the next
   .projectPlus {
-    grid-column: 2 / 3;
+    width: calc(var(--column-width) * 2);
+  }
+
+  //these two classes are strictly for plus buttons on the process pages because they don't have the see process button, their position is made absolute to be inline with the title. where as on the projects page, this cannot be the case because the see process button gets in the way. its a little messy to do it this way but I think as long as I keep track of it it will be okay.
+  .processPlus {
+    position: absolute;
+  }
+
+  .processPlusButton {
+    bottom: 20px;
   }
 }
 
@@ -94,7 +104,6 @@
     flex-wrap: wrap;
     width: var(--column-width);
     grid-column: 1 / 2;
-    margin-top: 5px;
   }
 
   .homeNav {
@@ -107,19 +116,10 @@
   }
 
   .projectPlus {
-    grid-column: 1 / 2;
+    width: var(--column-width);
   }
 
   .site_footer ul {
     width: calc(var(--column-width) / 2);
-  }
-
-  //these two classes are strictly for plus buttons on the process pages because they don't have the see process button, their position is made absolute to be inline with the title. where as on the projects page, this cannot be the case because the see process button gets in the way. its a little messy to do it this way but I think as long as I keep track of it it will be okay.
-  .processPlus {
-    position: absolute;
-  }
-
-  .processPlusButton {
-    bottom: 15px;
   }
 }
