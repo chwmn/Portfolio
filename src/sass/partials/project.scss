@@ -9,6 +9,15 @@
 //individual projects
 .project {
   margin: var(--site-padding);
+
+  p {
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 15px 30px 0 0;
+    width: var(--column-width);
+  }
 }
 
 //worksImage -> images for works lol
@@ -21,6 +30,7 @@
   height: var(--image-height);
   width: var(--image-width);
   overflow: hidden;
+  margin-bottom: 10px;
   // box-shadow: 0 0 10px 5px #ebebeb;
   // box-shadow: 2px 0 15px 5px #4f4f4f;
 
@@ -44,16 +54,21 @@
 //  -->projectPlus
 .projectInfo {
   border-bottom: 1px dotted #fff;
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, var(--columns-width));
+  grid-template-rows: repeat(2, auto);
+  height: fit-content;
 }
 
-.projectHead {
-  // align-self: flex-end;
+.projectTitle {
   display: flex;
   flex-wrap: wrap;
   margin: 10px 0;
   width: var(--column-width);
+  grid-column: 1 / 2;
+  position: relative;
 
   h3 {
     padding: 5px 0 0 0;
@@ -65,25 +80,37 @@
     height: fit-content;
     line-height: 1.5;
     width: var(--column-width);
+    // position: absolute;
+    // bottom: 0;
   }
 }
 
 .projectDescript {
   display: flex;
   width: calc(var(--column-width) * 2);
+  grid-column: 2 / 4; // height: fit-content;
+  margin-top: 10px;
 
   p {
     box-sizing: border-box;
     color: #fff;
     font-size: 16px;
     font-weight: 200;
-    padding: 15px 30px 15px 0;
+    padding: 0px 30px 0 0;
     width: var(--column-width);
   }
 
   ul {
     box-sizing: border-box;
-    padding: 15px 30px 15px 0;
+    width: var(--column-width);
+    padding: 0px 30px 0 0;
+  }
+
+  ol {
+    box-sizing: border-box;
+    width: var(--column-width);
+    padding: 0px 0 0 15px;
+    list-style-type: decimal;
   }
 
   li {
@@ -100,14 +127,17 @@
   align-self: flex-end;
   display: flex;
   position: relative;
+  height: 50px;
   width: var(--column-width);
+  // position: absolute;
+  grid-column: 4 / 5;
+  // left: calc((var(--column-width) * 3) + var(--site-padding));
 }
 
 //process button -> see more button
 .seeProcess {
   background-color: #fff;
   border-radius: 25px;
-  bottom: 8px;
   box-sizing: border-box;
   color: #000000;
   display: block;
@@ -115,6 +145,7 @@
   font-weight: 400;
   height: 34px;
   padding: 8px;
+  margin: 8px 0;
   position: absolute;
   text-align: center;
   width: 160px;

@@ -13,12 +13,12 @@ layout: default.html
   in projects %}
   <div class="project">
     <div class="projectImage">
-      <a href=""
+      <a href="{{ project.url }}"
         ><img src="{{ project.data.image }}" alt="{{ project.data.alt }}"
       /></a>
     </div>
     <div class="projectInfo">
-      <div class="projectHead">
+      <div class="projectTitle">
         <h2>{{ project.data.projectTitle}}</h2>
       </div>
       <div class="projectDescript">
