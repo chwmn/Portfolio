@@ -109,7 +109,7 @@
   ol {
     box-sizing: border-box;
     width: var(--column-width);
-    padding: 0px 0 0 15px;
+    padding: 0px 0 0 23px;
     list-style-type: decimal;
   }
 
@@ -147,6 +147,7 @@
   padding: 8px;
   margin: 8px 0;
   position: absolute;
+  bottom: 0;
   text-align: center;
   width: 160px;
 }
