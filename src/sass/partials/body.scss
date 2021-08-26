@@ -1,0 +1,165 @@
+:root {
+  --column-width: calc((100vw - (var(--site-padding) * 2)) / 4);
+  --site-padding: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #363636;
+}
+
+.container {
+  //global stylings for headers and p and li
+  color: #fff;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+
+  h1 {
+    font-family: "Migra";
+    font-size: 68px;
+  }
+
+  h2 {
+    color: #fff;
+    font-family: "NeueMontreal", sans-serif;
+    font-weight: 400;
+  }
+
+  h3 {
+    color: #fff;
+    font-family: "NeueMontreal", sans-serif;
+    font-weight: 200;
+  }
+
+  li {
+    font-family: "NeueMontreal", sans-serif;
+  }
+
+  a {
+    font-family: "NeueMontreal", sans-serif;
+  }
+
+  p {
+    font-family: "NeueMontreal", sans-serif;
+  }
+}
+
+// site_nav
+.site_nav {
+  border-bottom: 1px dotted #fff;
+  box-sizing: border-box;
+  padding: var(--site-padding) var(--site-padding)
+    calc(var(--site-padding) * 0.75) var(--site-padding);
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  li {
+    margin: 5px 0;
+
+    a {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+}
+
+.homeNav {
+  box-sizing: border-box;
+  width: var(--column-width);
+}
+
+.nav {
+  box-sizing: border-box;
+  width: var(--column-width);
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.leafIcon {
+  height: 20px;
+  text-align: left;
+
+  img {
+    height: inherit;
+  }
+}
+
+//site title where my name is
+// .title {
+//   height: 150px;
+//   background-color: #fff;
+//   margin: var(--site-padding);
+//   display: flex;
+//   justify-content: center;
+
+//   h1 {
+//     align-self: center;
+//     font-family: "NeueMontreal", sans-serif;
+//     font-size: 20px;
+//     letter-spacing: 0;
+//     font-weight: 600;
+//   }
+// }
+
+.about {
+  // height: 700px;
+  // background-color: #f5fff8;
+  background-color: #fff;
+  // padding: 20px;
+
+  h1 {
+    color: #000;
+    margin: 20px 20px 0 20px;
+    padding-top: 20px;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+.aboutContent {
+  display: flex;
+  // margin: var(--site-padding);
+}
+
+.aboutInfo {
+  border: 1px dotted black;
+  box-sizing: border-box;
+  height: 550px;
+  margin: 20px;
+  padding: 10px;
+  width: var(--column-width);
+
+  img {
+    width: 100%;
+  }
+}
+
+.site_footer {
+  display: flex;
+  justify-content: flex-end;
+  margin: var(--site-padding);
+
+  ul {
+    // width: calc((100vw - (var(--site-padding) * 2)) / 2);
+    width: var(--column-width);
+  }
+
+  li {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 200;
+    margin: 10px 0;
+  }
+}

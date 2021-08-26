@@ -1,0 +1,124 @@
+//the whole projects section
+.projectSection {
+  h1 {
+    color: #fff;
+    margin: 20px;
+  }
+}
+
+//individual projects
+.project {
+  margin: var(--site-padding);
+}
+
+//worksImage -> images for works lol
+.projectImage {
+  //variables for width and height to get same ratio always
+  --image-height: calc((var(--image-width) * 16) / 31);
+  --image-width: var(--column-width);
+
+  box-sizing: border-box;
+  height: var(--image-height);
+  width: var(--image-width);
+  // box-shadow: 0 0 10px 5px #ebebeb;
+  // box-shadow: 2px 0 15px 5px #4f4f4f;
+
+  img {
+    box-sizing: border-box;
+    height: inherit;
+    object-fit: cover;
+    width: inherit;
+  }
+
+  a {
+    height: inherit;
+    width: inherit;
+  }
+}
+
+//project -> indivual project slides i guess
+//project info
+//  -->projectHead
+//  -->projectDescript
+//  -->projectPlus
+.projectInfo {
+  border-bottom: 1px dotted #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projectHead {
+  // align-self: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  width: var(--column-width);
+
+  h3 {
+    padding: 5px 0 0 0;
+  }
+
+  h2 {
+    align-self: flex-end;
+    font-size: 20px;
+    height: fit-content;
+    line-height: 1.5;
+    width: var(--column-width);
+  }
+}
+
+.projectDescript {
+  display: flex;
+  width: calc(var(--column-width) * 2);
+
+  p {
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 15px 30px 15px 0;
+    width: var(--column-width);
+  }
+
+  ul {
+    box-sizing: border-box;
+    padding: 15px 30px 15px 0;
+  }
+
+  li {
+    color: #fff;
+    font-weight: 200;
+  }
+}
+
+.info {
+  overflow: hidden;
+}
+
+.projectPlus {
+  align-self: flex-end;
+  display: flex;
+  position: relative;
+  width: var(--column-width);
+}
+
+//process button -> see more button
+.seeMore {
+  background-color: #fff;
+  border-radius: 25px;
+  bottom: 8px;
+  box-sizing: border-box;
+  color: #000000;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  height: 34px;
+  padding: 8px;
+  position: absolute;
+  text-align: center;
+  width: 160px;
+}
+
+.seeMore:hover {
+  font-style: italic;
+}

@@ -5,59 +5,62 @@
   --content-height: 200px;
 }
 
+//styling plus box
 .plus {
-  width: 30px;
-  height: 30px;
   bottom: 10px;
+  height: 30px;
   right: 0;
   position: absolute;
+  width: 30px;
 }
 
+//styling actual bars that make plus sign, first in minus position
 .plus:before,
 .plus:after {
-  content: "";
-  width: 30px;
-  height: 2px;
   background-color: #fff;
+  content: "";
+  height: 2px;
   margin: 14px 0;
   position: absolute;
+  width: 30px;
 }
 
+//^^now in plus position
 .open:after {
-  transform: rotate(90deg);
+  animation-duration: 0.2s;
   animation-name: rotateOpen;
-  animation-duration: 0.5s;
+  transform: rotate(90deg);
 }
 
 .close:after {
-  transform: rotate(180deg);
+  animation-duration: 0.2s;
   animation-name: rotateClose;
-  animation-duration: 0.5s;
+  transform: rotate(180deg);
 }
 
-//for the javascript hidden thingy
+//for the javascript hidden thingy -> gets applied to elements with .info within .projectDescript
 .hidden {
-  opacity: 0;
   animation-name: hid;
   animation-duration: 0.2s;
   height: 0;
-  display: none;
+  opacity: 0;
+  // display: none;
 }
 
 .shown {
-  display: block;
-  animation-name: shown;
   animation-duration: 0.2s;
-  opacity: 1;
+  animation-name: shown;
+  display: block;
   height: var(--content-height);
+  opacity: 1;
 }
 
-//for p -> with height
+//animations for show and hide, display becomes none and opacity changes, height shrinks too and this works because of overflow:hidden
 @keyframes shown {
   0% {
-    opacity: 0;
-    height: 0;
     display: none;
+    height: 0;
+    opacity: 0;
   }
 
   1% {
@@ -65,16 +68,16 @@
   }
 
   100% {
-    opacity: 1;
     height: var(--content-height);
+    opacity: 1;
   }
 }
 
 @keyframes hid {
   0% {
-    opacity: 1;
-    height: var(--content-height);
     display: block;
+    height: var(--content-height);
+    opacity: 1;
   }
 
   99% {
@@ -82,52 +85,12 @@
   }
 
   100% {
-    opacity: 0;
     height: 0;
+    opacity: 0;
   }
 }
 
-//for the h3 -> no height or else it messes things up
-
-// .hide {
-//   opacity: 0;
-//   animation-name: hide;
-//   animation-duration: 0.2s;
-//   height: 0;
-//   display: none;
-// }
-
-// .show {
-//   display: block;
-//   animation-name: show;
-//   animation-duration: 0.2s;
-//   opacity: 1;
-//   height: fit-content;
-// }
-
-// @keyframes show {
-//   0% {
-//     opacity: 0;
-//     height: 0;
-//   }
-
-//   100% {
-//     opacity: 1;
-//     height: fit-content;
-//   }
-// }
-
-// @keyframes hide {
-//   0% {
-//     opacity: 1;
-//     height: fit-content;
-//   }
-
-//   100% {
-//     opacity: 0;
-//     height: 0;
-//   }
-// }
+//plus sign animation to minus sign for open and close
 
 @keyframes rotateOpen {
   from {
