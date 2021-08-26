@@ -1,17 +1,8 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/css/");
-  eleventyConfig.setTemplateFormats([
-    "css",
-    "html",
-    "liquid",
-    "jpg",
-    "png",
-    "svg",
-    "js",
-    "woff2",
-    "woff",
-    "ttf",
-  ]);
+  eleventyConfig.setTemplateFormats(["css", "html", "liquid"]);
+  eleventyConfig.addPassthroughCopy("scripts");
+  eleventyConfig.addPassthroughCopy("assets");
 
   function sortByPageOrder(values) {
     return values.slice().sort((a, b) => a.data.order - b.data.order);
