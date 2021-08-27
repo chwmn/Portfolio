@@ -8,17 +8,28 @@
   width: var(--image-width);
   overflow: hidden;
   margin-bottom: 10px;
+  // background-image: linear-gradient(#000, #1a1a1a);
+  background-color: #000;
 
   img {
+    --margin: 80px;
     box-sizing: border-box;
     object-fit: cover;
     max-height: 600px;
-    width: var(--image-width);
+    height: auto;
+    margin: calc(var(--margin) / 2) var(--margin);
+    // padding: 80px;
+    // width: var(--image-width);
+    width: calc(var(--image-width) - calc(var(--margin) * 2));
+    box-sizing: border-box;
+    border: 1px solid grey;
   }
 
   p {
     font-style: italic;
     font-size: 14px;
+    margin-left: 80px;
+    margin-bottom: 20px;
     // width: 100%;
     // text-align: center;
 
