@@ -1,0 +1,27 @@
+//worksImage -> images for works lol
+.processImage {
+  //variables for width and height to get same ratio always
+  --image-width: calc(var(--column-width) * 2);
+
+  box-sizing: border-box;
+  height: auto;
+  width: var(--image-width);
+  overflow: hidden;
+  margin-bottom: 10px;
+
+  img {
+    box-sizing: border-box;
+    object-fit: cover;
+    max-height: 600px;
+    width: var(--image-width);
+  }
+
+  p {
+    font-style: italic;
+    font-size: 14px;
+    // width: 100%;
+    // text-align: center;
+
+    //i think i will keep it justified left to keep everything in the grid
+  }
+}

@@ -57,8 +57,8 @@
   animation: shown 0.1s;
   animation-timing-function: ease-in;
   height: auto;
-  max-height: 500px;
-  margin-bottom: 20px;
+  max-height: 650px;
+  margin-bottom: 40px;
   opacity: 1;
   box-sizing: border-box;
 }
@@ -72,16 +72,16 @@
   }
 
   to {
-    max-height: 500px;
-    margin-bottom: 20px;
+    max-height: 650px;
+    margin-bottom: 40px;
     opacity: 1;
   }
 }
 
 @keyframes hid {
   from {
-    max-height: 500px;
-    margin-bottom: 20px;
+    max-height: 650px;
+    margin-bottom: 40px;
     opacity: 1;
   }
 
