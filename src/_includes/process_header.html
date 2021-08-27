@@ -1,0 +1,21 @@
+<header class="site_header">
+  <h1>{{ projectTitle }}</h1>
+
+  <div class="headInfo">
+    <div class="finalResultButtonContainer">
+      <a class="finalResult" href="">FINAL RESULT →</a>
+    </div>
+    <p>{{ summary }}</p>
+
+    <ul>
+      <li>{{ semester}}</li>
+
+      {% for category in categories %}
+      <li>{{ category }}</li>
+      {% endfor %}
+    </ul>
+    <div class="headImage">
+      <img src="{{ image }}" alt="{{ alt }}" />
+    </div>
+  </div>
+</header>

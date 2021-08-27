@@ -12,6 +12,7 @@
   right: 0;
   position: absolute;
   width: 30px;
+  cursor: pointer;
 }
 
 //styling actual bars that make plus sign, first in minus position
@@ -29,66 +30,65 @@
 .open:after {
   animation-duration: 0.1s;
   animation-name: rotateOpen;
+  animation-timing-function: linear;
   transform: rotate(90deg);
 }
 
 .close:after {
   animation-duration: 0.1s;
   animation-name: rotateClose;
+  animation-timing-function: linear;
   transform: rotate(180deg);
 }
 
 //for the javascript hidden thingy -> gets applied to elements with .info within .projectDescript
 .hidden {
-  animation-name: hid;
-  animation-duration: 0.1s;
+  display: inline-block;
+  animation: hid 0.1s;
+  animation-timing-function: ease-out;
   max-height: 0;
   opacity: 0;
   margin-bottom: 0;
+  box-sizing: border-box;
 }
 
 .shown {
-  animation-duration: 0.1s;
-  animation-name: shown;
-  // height: var(--content-height);
+  display: inline-block;
+  animation: shown 0.1s;
+  animation-timing-function: ease-in;
   height: auto;
-  // min-height: 200px;
   max-height: 500px;
   margin-bottom: 20px;
-  // height: 120%;
   opacity: 1;
+  box-sizing: border-box;
 }
 
 //animations for show and hide, display becomes none and opacity changes, height shrinks too and this works because of overflow:hidden
 @keyframes shown {
-  0% {
-    // min-height: 0;
+  from {
     max-height: 0;
-    opacity: 0;
     margin-bottom: 0;
+    opacity: 0;
   }
 
-  100% {
-    // min-height: 150px;
+  to {
     max-height: 500px;
-    opacity: 1;
     margin-bottom: 20px;
+    opacity: 1;
   }
 }
 
 @keyframes hid {
-  0% {
-    // min-height: 150px;
+  from {
     max-height: 500px;
-    opacity: 1;
     margin-bottom: 20px;
+    opacity: 1;
   }
 
-  100% {
-    // min-height: 0;
+  to {
     max-height: 0;
-    opacity: 0;
     margin-bottom: 0;
+    opacity: 0;
   }
 }
 

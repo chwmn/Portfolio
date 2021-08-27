@@ -70,6 +70,7 @@ body {
   }
 }
 
+//leaf icon
 .homeNav {
   box-sizing: border-box;
   width: var(--column-width);
@@ -92,23 +93,6 @@ body {
     height: inherit;
   }
 }
-
-//site title where my name is
-// .title {
-//   height: 150px;
-//   background-color: #fff;
-//   margin: var(--site-padding);
-//   display: flex;
-//   justify-content: center;
-
-//   h1 {
-//     align-self: center;
-//     font-family: "NeueMontreal", sans-serif;
-//     font-size: 20px;
-//     letter-spacing: 0;
-//     font-weight: 600;
-//   }
-// }
 
 .about {
   // height: 700px;

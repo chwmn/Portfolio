@@ -1,11 +1,10 @@
 //the whole projects section
-.projectSection {
+#projects {
   h1 {
     color: #fff;
     margin: 20px;
   }
 }
-
 //individual projects
 .project {
   margin: var(--site-padding);
@@ -31,8 +30,6 @@
   width: var(--image-width);
   overflow: hidden;
   margin-bottom: 10px;
-  // box-shadow: 0 0 10px 5px #ebebeb;
-  // box-shadow: 2px 0 15px 5px #4f4f4f;
 
   img {
     box-sizing: border-box;

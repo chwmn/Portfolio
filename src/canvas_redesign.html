@@ -10,15 +10,15 @@ layout: default.html
 order: 1
 ---
 
-<section class="projectSection">
-  <h1>{{ projectTitle }}</h1>
+{% include process_header.html %}
 
+<section>
   <!-- problem -->
   <div class="project">
     <!-- <p>{{ summary }}</p> -->
     <div class="projectInfo">
       <div class="projectTitle">
-        <h2>PROBLEM</h2>
+        <h2>PROBLEMS</h2>
       </div>
       <div class="projectDescript">
         <p class="info hidden">
@@ -49,7 +49,7 @@ order: 1
   <div class="project">
     <div class="projectInfo">
       <div class="projectTitle">
-        <h2>SOLUTION</h2>
+        <h2>SOLUTIONS</h2>
       </div>
       <div class="projectDescript">
         <p class="info hidden">
