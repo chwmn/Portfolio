@@ -4,21 +4,38 @@
     --column-width: calc((100vw - (var(--site-padding) * 2)) / 3);
   }
 
+  .site_nav ul {
+    grid-template-columns: repeat(3, var(--columns-width));
+  }
   .nav {
     text-align: right;
   }
 
+  //nva grid placement
+  .homeNav {
+    position: absolute;
+    // width: fit-content;
+  }
+
+  .navProject {
+    grid-column: 1 / 2;
+  }
+
+  .navAbout {
+    grid-column: 2 / 3;
+  }
+
+  .navContact {
+    grid-column: 3 / 4;
+  }
+
+  //project grid placement
   .projectInfo {
     grid-template-columns: repeat(3, var(--column-width));
   }
 
   .projectPlus {
     grid-column: 3 / 4;
-  }
-
-  .homeNav {
-    position: absolute;
-    width: fit-content;
   }
 
   .projectDescript {
@@ -73,21 +90,37 @@
     --column-width: calc((100vw - (var(--site-padding) * 2)) / 2);
   }
 
-  .nav {
-    text-align: right;
-    width: 100%;
-  }
-
   .projectInfo {
     grid-template-columns: repeat(2, var(--columns-width));
     grid-template-rows: repeat(3, auto);
   }
 
-  .homeNav {
-    position: absolute;
-    width: fit-content;
+  //nav grid
+  .site_nav ul {
+    grid-template-columns: repeat(2, var(--columns-width));
+  }
+  .nav {
+    // text-align: right;
+    width: 100%;
   }
 
+  //nva grid placement
+  .homeNav {
+    position: absolute;
+    // width: fit-content;
+  }
+
+  .navProject {
+    grid-column: 2 / 3;
+  }
+
+  .navAbout {
+    grid-column: 2 / 3;
+  }
+
+  .navContact {
+    grid-column: 2 / 3;
+  }
   //getting rid of top padding here for the info hidden stuff so that when everything is collapsed, there is no extra spacing and everything is on the same line
   .projectDescript {
     grid-column: 1 / 3;

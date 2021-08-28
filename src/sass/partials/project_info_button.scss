@@ -15,31 +15,66 @@
   cursor: pointer;
 }
 
-//styling actual bars that make plus sign, first in minus position
-.plus:before,
-.plus:after {
+.plus:before {
+  width: 2px;
+  height: 28px;
   background-color: #fff;
   content: "";
-  height: 2px;
-  margin: 14px 0;
+  display: block;
+  margin: 0 14px;
   position: absolute;
-  width: 30px;
 }
 
-//^^now in plus position
-.open:after {
-  animation-duration: 0.1s;
-  animation-name: rotateOpen;
-  animation-timing-function: linear;
-  transform: rotate(90deg);
+.plus:after {
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff;
+  content: "";
+  display: block;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 4px;
+  bottom: 5px;
 }
 
-.close:after {
-  animation-duration: 0.1s;
-  animation-name: rotateClose;
-  animation-timing-function: linear;
+.open {
+  transform: rotate(0deg);
+  animation: rotateOpen 0.2s;
+}
+
+.close {
   transform: rotate(180deg);
+  animation: rotateClose 0.2s;
 }
+
+//below is stylings for making it a plus sign, not an arrow
+
+//styling actual bars that make plus sign, first in minus position
+// .plus:before,
+// .plus:after {
+//   background-color: #fff;
+//   content: "";
+//   height: 2px;
+//   margin: 14px 0;
+//   position: absolute;
+//   width: 30px;
+// }
+
+// //^^now in plus position
+// .open:after {
+//   animation-duration: 0.1s;
+//   animation-name: rotateOpen;
+//   animation-timing-function: linear;
+//   transform: rotate(90deg);
+// }
+
+// .close:after {
+//   animation-duration: 0.1s;
+//   animation-name: rotateClose;
+//   animation-timing-function: linear;
+//   transform: rotate(180deg);
+// }
 
 //for the javascript hidden thingy -> gets applied to elements with .info within .projectDescript
 .hidden {
@@ -100,13 +135,13 @@
   }
 
   to {
-    transform: rotate(90deg);
+    transform: rotate(0deg);
   }
 }
 
 @keyframes rotateClose {
   from {
-    transform: rotate(90deg);
+    transform: rotate(360deg);
   }
 
   to {

@@ -57,8 +57,11 @@ body {
     calc(var(--site-padding) * 0.75) var(--site-padding);
 
   ul {
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
+    display: grid;
+
+    grid-template-columns: repeat(4, var(--columns-width));
   }
 
   li {
@@ -76,15 +79,7 @@ body {
 .homeNav {
   box-sizing: border-box;
   width: var(--column-width);
-}
-
-.nav {
-  box-sizing: border-box;
-  width: var(--column-width);
-}
-
-.alignRight {
-  text-align: right;
+  grid-column: 1 / 2;
 }
 
 .leafIcon {
@@ -94,6 +89,24 @@ body {
   img {
     height: inherit;
   }
+}
+
+.navProject {
+  grid-column: 2 / 3;
+}
+
+.navAbout {
+  grid-column: 3 / 4;
+}
+
+.navContact {
+  text-align: right;
+  grid-column: 4 / 5;
+}
+
+.nav {
+  box-sizing: border-box;
+  width: var(--column-width);
 }
 
 .about {
