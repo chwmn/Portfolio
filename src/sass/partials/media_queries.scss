@@ -235,6 +235,13 @@
     grid-row: 1 / 2;
   }
 
+  .processImage {
+    --margin: 20px;
+
+    img {
+      margin: var(--margin);
+    }
+  }
   // .plus {
   //   bottom: 20px;
   // }
