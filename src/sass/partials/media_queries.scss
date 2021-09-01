@@ -5,7 +5,7 @@
   }
 
   .site_nav ul {
-    grid-template-columns: repeat(3, var(--columns-width));
+    grid-template-columns: repeat(3, calc(100% / 3));
   }
   .nav {
     text-align: right;
@@ -14,6 +14,7 @@
   //nva grid placement
   .homeNav {
     position: absolute;
+    width: 100px;
     // width: fit-content;
   }
 
@@ -31,7 +32,7 @@
 
   //project grid placement
   .projectInfo {
-    grid-template-columns: repeat(3, var(--column-width));
+    grid-template-columns: repeat(3, calc(100% / 3));
   }
 
   .projectPlus {
@@ -49,14 +50,13 @@
   //for header info
   .headInfo {
     margin-top: 40px;
-    grid-template-columns: repeat(3, var(--column-width));
+    grid-template-columns: repeat(3, calc(100% / 3));
     grid-template-rows: repeat(3, auto);
 
     p {
       grid-row: 2 / 3;
       grid-column: 1 / 2;
       height: fit-content;
-      padding-right: 0;
     }
 
     ul {
@@ -69,7 +69,7 @@
 
   .headImage {
     grid-column: 2 / 4;
-    grid-row: 3 / 4;
+    grid-row: 2 / 4;
   }
 
   .finalResultButtonContainer {
@@ -81,6 +81,43 @@
   .finalResult {
     // right: 0;
     position: relative;
+  }
+
+  .site_footer ul {
+    width: calc(100% / 3);
+  }
+
+  //shown animations, changing margin-bottom to  10px instead of 40px because we dont need the bottom margin anymore because its stacked on elements with spacing
+  .shown {
+    margin-bottom: 10px;
+  }
+
+  @keyframes shown {
+    from {
+      max-height: 0;
+      margin-bottom: 0;
+      opacity: 0;
+    }
+
+    to {
+      max-height: 650px;
+      margin-bottom: 10px;
+      opacity: 1;
+    }
+  }
+
+  @keyframes hid {
+    from {
+      max-height: 650px;
+      margin-bottom: 10px;
+      opacity: 1;
+    }
+
+    to {
+      max-height: 0;
+      margin-bottom: 0;
+      opacity: 0;
+    }
   }
 }
 

@@ -18,8 +18,9 @@ body {
   line-height: 1.1;
 
   h1 {
-    font-family: "Migra";
-    font-size: 68px;
+    font-family: "NeueMontreal", sans-serif;
+    font-size: 60px;
+    font-weight: 400;
   }
 
   h2 {
@@ -61,7 +62,7 @@ body {
     // flex-wrap: wrap;
     display: grid;
 
-    grid-template-columns: repeat(4, var(--columns-width));
+    grid-template-columns: repeat(4, 25%);
   }
 
   li {
@@ -78,7 +79,7 @@ body {
 //leaf icon
 .homeNav {
   box-sizing: border-box;
-  width: var(--column-width);
+  width: 100%;
   grid-column: 1 / 2;
 }
 
@@ -106,7 +107,7 @@ body {
 
 .nav {
   box-sizing: border-box;
-  width: var(--column-width);
+  width: 100%;
 }
 
 .about {
@@ -150,10 +151,11 @@ body {
   display: flex;
   justify-content: flex-end;
   margin: var(--site-padding);
+  // grid-template-columns: repeat(4, 25%);
 
   ul {
     // width: calc((100vw - (var(--site-padding) * 2)) / 2);
-    width: var(--column-width);
+    width: 25%;
   }
 
   li {
@@ -162,4 +164,16 @@ body {
     font-weight: 200;
     margin: 10px 0;
   }
+}
+
+.emptySpace {
+  display: block;
+  content: "";
+  height: 20px;
+}
+
+.emptySpaceSmall {
+  display: block;
+  content: "";
+  height: 10px;
 }
