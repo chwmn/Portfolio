@@ -1,5 +1,5 @@
-//responsive stuff @ 950px -> 3 columns
-@media all and (max-width: 950px) {
+//responsive stuff @ 1100px -> 3 columns
+@media all and (max-width: 1100px) {
   :root {
     --column-width: calc((100vw - (var(--site-padding) * 2)) / 3);
   }
@@ -45,6 +45,11 @@
 
   .projectTitle {
     grid-row: 2 / 3;
+  }
+
+  //projectimage sizing {
+  .projectImage {
+    --image-width: calc(100% / 3);
   }
 
   //for header info
@@ -123,18 +128,14 @@
 
 //responsive stuff @ 760px -> 2 columns
 @media all and (max-width: 760px) {
-  :root {
-    --column-width: calc((100vw - (var(--site-padding) * 2)) / 2);
-  }
-
   .projectInfo {
-    grid-template-columns: repeat(2, var(--columns-width));
+    grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(3, auto);
   }
 
   //nav grid
   .site_nav ul {
-    grid-template-columns: repeat(2, var(--columns-width));
+    grid-template-columns: repeat(2, 50%);
   }
   .nav {
     // text-align: right;
@@ -175,6 +176,11 @@
     }
   }
 
+  //projectimage sizing {
+  .projectImage {
+    --image-width: 50%;
+  }
+
   //if you want to change title back to on top instead of on bottom, simply change the grid row to 1 / 2 for the title and 3 / 4 for the plus button, and turn these next two things back on::after
 
   // .plus {
@@ -201,7 +207,7 @@
 
   //for header info
   .headInfo {
-    grid-template-columns: repeat(2, var(--column-width));
+    grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(4, auto);
 
     p {
@@ -226,10 +232,6 @@
 
 //responsive stuff @ 520px -> 1 columns
 @media all and (max-width: 520px) {
-  :root {
-    --column-width: calc(100vw - (var(--site-padding) * 2));
-  }
-
   .nav {
     text-align: right;
     width: 100%;
@@ -237,25 +239,46 @@
 
   .projectDescript {
     flex-wrap: wrap;
-    width: calc(var(--column-width) * 0.8);
+    // width: calc(var(--column-width) * 0.8);
+    width: 85%;
     grid-column: 1 / 2;
 
     p {
       padding: 0;
+      width: 100%;
     }
 
     ol {
       padding: 0 0 0 25px;
+      width: 100%;
+    }
+
+    ul {
+      width: 100%;
     }
   }
 
+  .lists {
+    width: 100%;
+    p {
+      width: 100%;
+    }
+
+    ul {
+      width: 100%;
+    }
+
+    ol {
+      width: 100%;
+    }
+  }
   .homeNav {
     position: absolute;
     width: fit-content;
   }
 
   .projectInfo {
-    grid-template-columns: repeat(1, var(--columns-width));
+    grid-template-columns: repeat(1, 100%);
   }
 
   .projectPlus {
@@ -276,9 +299,15 @@
     --margin: 20px;
 
     img {
-      margin: var(--margin);
+      margin: var(--margin) auto;
     }
   }
+
+  //projectimage sizing {
+  .projectImage {
+    --image-width: 100%;
+  }
+
   // .plus {
   //   bottom: 20px;
   // }
@@ -288,24 +317,25 @@
   // }
 
   .site_footer ul {
-    width: calc(var(--column-width) / 2);
+    width: 50%;
   }
 
   //for header info
   .site_header {
     h1 {
-      width: var(--column-width);
+      width: 100%;
     }
   }
+
   .headInfo {
-    grid-template-columns: repeat(1, var(--column-width));
+    grid-template-columns: repeat(1, 100%);
     grid-template-rows: repeat(4, auto);
 
     p {
       grid-row: 2 / 3;
       grid-column: 1 / 2;
       height: fit-content;
-      width: calc(var(--column-width) * 0.8);
+      width: 100%;
     }
 
     ul {
@@ -318,13 +348,13 @@
   }
 
   .headImage {
-    --image-width: var(--column-width);
+    --image-width: 100%;
     grid-column: 1 / 2;
     grid-row: 3 / 4;
   }
 
   //for process images
   .processImage {
-    --image-width: calc(var(--column-width) * 0.8);
+    --image-width: 100%;
   }
 }

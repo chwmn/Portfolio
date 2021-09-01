@@ -13,8 +13,15 @@ layout: default.html
   in projects %}
   <div class="project">
     <div class="projectImage">
-      <a href="{{ project.url }}"
-        ><img src="{{ project.data.image }}" alt="{{ project.data.alt }}"
+      <a href="{{ project.url }}">
+        <div class="bar">
+          <div class="dot"></div>
+          <div class="greyBar">
+            <h6>← → ⟳</h6>
+          </div>
+          <div class="greyTab"></div>
+        </div>
+        <img src="{{ project.data.image }}" alt="{{ project.data.alt }}"
       /></a>
     </div>
     <div class="projectInfo">
@@ -53,12 +60,17 @@ layout: default.html
         complement our daily living.
       </p>
     </div>
-    <div class="aboutInfo">
-      <p>Some things I've made!</p>
-      <img src="/assets/images/PoplarTable01.jpg" alt="" />
-      <p>A small coffee table made of stained poplar wood with leaf inlays.</p>
-    </div>
     <!-- <div class="aboutInfo"></div>
     <div class="aboutInfo"></div> -->
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h1>CONTACT</h1>
+  <div>
+    <p>
+      If you want to talk about woodworking, progressive metal, graphic design,
+      or anything in between, feel free to shoot me an email!
+    </p>
   </div>
 </section>
