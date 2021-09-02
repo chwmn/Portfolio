@@ -25,6 +25,25 @@
   --image-height: calc((var(--image-width) * 16) / 31);
   --image-width: calc((100vw - (var(--site-padding) * 3)) / 4);
 
+  // height: var(--image-height);
+  width: var(--image-width);
+  height: calc(var(--image-height) + var(--bar-height));
+  margin-bottom: 10px;
+
+  img {
+    box-sizing: border-box;
+    object-fit: cover;
+    height: var(--image-height);
+    width: var(--image-width);
+  }
+
+  a {
+    height: inherit;
+    width: inherit;
+  }
+}
+
+.generalImage {
   --bar-color: #000;
   --tab-color: #4f4f4f;
 
@@ -38,31 +57,11 @@
   --grey-tab-margin: 34px;
   --grey-tab-width: 60px;
 
-  box-sizing: border-box;
-  // height: var(--image-height);
-  width: var(--image-width);
-  height: calc(var(--image-height) + var(--bar-height));
   overflow: hidden;
-  margin-bottom: 10px;
-  box-shadow: 5px 5px 10px #212121;
   border-radius: 2px;
-
-  img {
-    box-sizing: border-box;
-    object-fit: cover;
-    // height: var(--image-height);
-    width: var(--image-width);
-  }
-
-  a {
-    height: inherit;
-    width: inherit;
-  }
+  box-shadow: 5px 5px 10px #212121;
+  box-sizing: border-box;
 }
-
-// .imagesGeneral {
-
-// }
 
 .bar {
   height: var(--bar-height);

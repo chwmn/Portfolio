@@ -14,8 +14,17 @@
       <li>{{ category }}</li>
       {% endfor %}
     </ul>
-    <div class="headImage">
-      <img src="{{ image }}" alt="{{ alt }}" />
+    <div class="headImage generalImage">
+      <a href="">
+        <div class="bar">
+          <div class="dot"></div>
+          <div class="greyBar">
+            <h6>← →</h6>
+          </div>
+          <div class="greyTab"></div>
+        </div>
+        <img src="{{ image }}" alt="{{ alt }}" />
+      </a>
     </div>
   </div>
 </header>
