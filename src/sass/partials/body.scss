@@ -208,3 +208,83 @@ body {
   content: "";
   height: 10px;
 }
+
+form {
+  width: 390px;
+  label {
+    color: #fff;
+    font-family: "NeueMontreal", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    width: 100px;
+    height: fit-content;
+    align-self: center;
+    display: block;
+    margin: 10px 0;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 350px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-family: "NeueMontreal", sans-serif;
+    font-weight: 400;
+    background-color: #363636;
+    font-size: 20px;
+  }
+
+  input[type="submit"] {
+    width: 200px;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+  }
+
+  input:focus {
+    outline: none;
+    background-color: yellow;
+    border-radius: 25px;
+  }
+
+  textarea {
+    border-radius: 25px;
+    padding: 20px;
+    border: none;
+    background-color: #363636;
+    color: #fff;
+    font-family: "NeueMontreal", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    resize: none;
+  }
+
+  textarea:focus {
+    outline: none;
+  }
+}
+
+.textInput {
+  margin: 20px;
+  width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.msgInput {
+  justify-content: center;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px;
+
+  label {
+    width: 350px;
+  }
+}
