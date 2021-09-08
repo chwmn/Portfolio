@@ -17,6 +17,10 @@
     padding: 15px 30px 0 0;
     width: var(--column-width);
   }
+
+  h1 {
+    color: #fff;
+  }
 }
 
 //worksImage -> images for works lol
@@ -230,7 +234,7 @@
     color: #fff;
     font-size: 16px;
     font-weight: 200;
-    padding: 0px 30px 0 0;
+    padding: 0px 30px 0 10px;
     // width: var(--column-width);
 
     width: 50%;
@@ -240,7 +244,7 @@
     box-sizing: border-box;
     // width: var(--column-width);
     width: 50%;
-    padding: 0px 30px 0 0;
+    padding: 0px 30px 0 10px;
   }
 
   ol {
@@ -291,20 +295,28 @@
 
 //process button -> see more button
 .seeProcess {
-  background-color: #fff;
   border-radius: 25px;
   box-sizing: border-box;
-  color: #000000;
   display: block;
   font-size: 16px;
   font-weight: 400;
   height: 34px;
   padding: 8px;
   margin: 8px 0;
-  position: absolute;
+  // position: absolute;
   bottom: 0;
   text-align: center;
   width: 160px;
+}
+
+.whiteButton {
+  background-color: #fff;
+  color: #000000;
+}
+
+.blackButton {
+  background-color: #000;
+  color: #ffffff;
 }
 
 .seeProcess:hover {
