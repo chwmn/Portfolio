@@ -25,6 +25,7 @@
   // height: var(--image-height);
   width: var(--image-width);
   height: calc((var(--image-width) * (12 / 23)) + var(--bar-height));
+  position: relative;
   //   margin: 20px 0;
 
   img {
@@ -37,6 +38,28 @@
   a {
     height: inherit;
     width: inherit;
+  }
+}
+
+.workImg:hover {
+  top: -3px;
+  left: -3px;
+  animation-name: imageHover;
+  animation-duration: 0.1s;
+  box-shadow: 8px 8px 10px #121212;
+}
+
+@keyframes imageHover {
+  from {
+    top: 0;
+    left: 0;
+    box-shadow: 5px 5px 10px #121212;
+  }
+
+  to {
+    top: -3px;
+    box-shadow: 8px 8px 10px #121212;
+    left: -3px;
   }
 }
 

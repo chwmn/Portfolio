@@ -1,14 +1,14 @@
 .works {
   // padding: 20px;
-  font-size: 20px;
 
   h2 {
     text-transform: uppercase;
     color: #ffffff;
     // font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.2;
-    font-size: inherit;
+    font-size: 24px;
+    letter-spacing: 1px;
   }
 
   p {
@@ -19,13 +19,23 @@
     line-height: 1.4;
     font-size: 18px;
   }
+
+  li {
+    color: #ffffff;
+    // font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    line-height: 1.4;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
 }
 
 .indWorks {
-  margin: 40px;
-  gap: 20px;
+  margin: var(--site-padding);
+  gap: 40px;
   display: grid;
-  grid-template-columns: 450px 1fr 1fr 1fr;
+  grid-template-columns: 450px auto auto;
   grid-template-rows: auto auto;
   border-bottom: 1px dotted white;
   padding-bottom: 20px;
@@ -35,8 +45,12 @@
   display: flex;
   grid-row: 2 / 3;
 
-  h2 {
+  a {
     align-self: flex-end;
+  }
+
+  a:hover {
+    font-style: italic;
   }
 }
 
@@ -44,14 +58,20 @@
   display: flex;
   align-content: flex-end;
   flex-wrap: wrap;
-  grid-column: 2 / 4;
+  grid-column: 2 / 3;
   grid-row: 2 / 3;
+}
+
+.workCat {
+  grid-column: 3 / 4;
+  text-align: right;
 }
 
 .workButton {
   display: flex;
   justify-content: flex-end;
   grid-row: 2 / 3;
+  grid-column: 3 / 4;
 
   a {
     align-self: flex-end;
@@ -63,6 +83,12 @@
     font-size: inherit;
     background-color: #fff;
     display: block;
-    width: fit-content;
+    width: 150px;
+    text-align: center;
+    letter-spacing: 0.7px;
   }
+}
+
+.workButton a:hover {
+  font-style: italic;
 }

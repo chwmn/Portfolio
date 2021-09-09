@@ -10,7 +10,7 @@ layout: default.html
   {% for work in collections.works %}
   <div class="indWorks">
     <div class="workImg">
-      <a href="">
+      <a href="{{ work.url }}">
         <div class="bar">
           <div class="dot"></div>
           <div class="greyBar">
@@ -18,27 +18,31 @@ layout: default.html
           </div>
           <div class="greyTab"></div>
         </div>
-        <img src="{{ image }}" alt="" />
+        <img src="{{ work.data.image }}" alt="" />
       </a>
     </div>
 
     <div class="workHeader">
-      <h2>{{ projectTitle }}</h2>
+      <a href="{{ work.url }}"> <h2>{{ work.data.projectTitle }}</h2></a>
     </div>
 
     <div class="workInfo">
-      <p>{{ summary }}</p>
-      <ul>
-        <li>{{ year }}</li>
+      <p>{{ work.data.summary }}</p>
+    </div>
 
-        {% for category in work.categories %}
+    <div class="workCat">
+      <ul>
+        <li>{{ work.data.year }}</li>
+
+        {% assign category = work.data.categories %} {% for category in category
+        %}
         <li>{{ category}}</li>
         {% endfor %}
       </ul>
     </div>
 
     <div class="workButton">
-      <a href=""> SEE PROCESS </a>
+      <a href="{{ work.url }}"> SEE PROCESS </a>
     </div>
   </div>
   {% endfor %}
