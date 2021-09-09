@@ -1,165 +1,21 @@
 ---
-layout: default.html
+layout: base.html
 ---
 
-<!-- <section class="title">
-  <h1>CHULMIN HAN</h1>
-</section> -->
-
-<section id="projects">
-  <!-- <h1>PROJECTS</h1> -->
-
-  {% assign projects = collections.projects | sortByPageOrder %} {% for project
-  in projects %}
-  <div class="project">
-    <div class="projectImage generalImage">
-      <a href="{{ project.url }}">
-        <div class="bar">
-          <div class="dot"></div>
-          <div class="greyBar">
-            <h6>← →</h6>
-          </div>
-          <div class="greyTab"></div>
-        </div>
-        <img src="{{ project.data.image }}" alt="{{ project.data.alt }}"
-      /></a>
-    </div>
-    <div class="projectInfo">
-      <div class="projectTitle">
-        <h2>{{ project.data.projectTitle}}</h2>
-      </div>
-      <div class="projectDescript">
-        <p class="info hidden">{{ project.data.summary }}</p>
-        <ul class="info hidden">
-          <li>{{ project.data.semester}}</li>
-
-          {% for category in project.data.categories %}
-          <li>{{ category }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-      <div class="projectPlus">
-        <div>
-          <a class="seeProcess whiteButton" href="{{ project.url }}"
-            >SEE PROCESS →</a
-          >
-        </div>
-        <div class="plus open"></div>
-      </div>
-    </div>
-  </div>
-  {% endfor %}
-</section>
-
-<section id="other" class="">
-  <h1>OTHER WORKS</h1>
-  <div class="otherWorks">
-    <div class="works">
-      <div class="worksImage">
-        <a href="">
-          <img src="/assets/images/MapleDesk01.jpg" alt="" />
+<div class="container">
+  <nav class="site_nav">
+    <ul>
+      <li>
+        <a class="logo" href="">
+          <img src="/assets/svg/whiteLeaf.svg" alt="" />
         </a>
-      </div>
-      <div class="worksInfo">
-        <h2>Hard Maple Desk</h2>
-      </div>
-      <div>
-        <a class="seeProcess blackButton" href="">SEE WORK →</a>
-      </div>
-    </div>
-    <div class="works">
-      <div class="worksImage">
-        <a href="">
-          <img src="/assets/images/MapleDesk01.jpg" alt="" />
-        </a>
-      </div>
-      <div class="worksInfo">
-        <h2>Hard Maple Desk</h2>
-      </div>
-      <div>
-        <a class="seeProcess blackButton" href="">SEE WORK →</a>
-      </div>
-    </div>
-    <div class="works">
-      <div class="worksImage">
-        <a href="">
-          <img src="/assets/images/MapleDesk01.jpg" alt="" />
-        </a>
-      </div>
-      <div class="worksInfo">
-        <h2>Hard Maple Desk</h2>
-      </div>
-      <div>
-        <a class="seeProcess blackButton" href="">SEE WORK →</a>
-      </div>
-    </div>
-    <div class="works">
-      <div class="worksImage">
-        <a href="">
-          <img src="/assets/images/MapleDesk01.jpg" alt="" />
-        </a>
-      </div>
-      <div class="worksInfo">
-        <h2>Hard Maple Desk</h2>
-      </div>
-      <div>
-        <a class="seeProcess blackButton" href="">SEE WORK →</a>
-      </div>
-    </div>
-  </div>
-</section>
+      </li>
 
-<section id="contact" class="contact">
-  <h1>CONTACT</h1>
-
-  <div class="contactInfo">
-    <p>
-      What's up, my name is Chulmin Han, and I'm a multidisciplinary artist and
-      designer based out of Dallas, TX. I enjoy making things—from furniture to
-      UI's—that combine both form and function in ways that complement our daily
-      living.
-    </p>
-  </div>
-
-  <div class="contactInfo">
-    <p>
-      If you want to talk about hand planes, web design, the Dallas weather, or
-      anything in between, feel free to shoot me an email!
-    </p>
-  </div>
-
-  <form name="contact" netlify>
-    <div class="textInput">
-      <label for="email">EMAIL</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        data-name="Email"
-        placeholder="hello@whatsup.com"
-      />
-    </div>
-    <div class="textInput">
-      <label for="name"> NAME</label>
-      <input
-        type="text"
-        id="name"
-        name="name"
-        data-name="Name"
-        placeholder="CANADA DRY"
-      />
-    </div>
-    <div class="msgInput">
-      <label for="message">MESSAGE</label>
-      <textarea
-        name="message"
-        id="message"
-        cols="30"
-        rows="10"
-        data-name="Message"
-        placeholder="hellooooooo"
-      ></textarea>
-    </div>
-    <input type="submit" value="SUBMIT" />
-  </form>
-</section>
+      <li>
+        <a href=""> CONTACT </a>
+      </li>
+    </ul>
+  </nav>
+  <section></section>
+  <footer></footer>
+</div>
