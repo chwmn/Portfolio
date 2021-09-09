@@ -1,0 +1,68 @@
+.works {
+  // padding: 20px;
+  font-size: 20px;
+
+  h2 {
+    text-transform: uppercase;
+    color: #ffffff;
+    // font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: inherit;
+  }
+
+  p {
+    color: #ffffff;
+    // font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    line-height: 1.4;
+    font-size: 18px;
+  }
+}
+
+.indWorks {
+  margin: 40px;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: 450px 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  border-bottom: 1px dotted white;
+  padding-bottom: 20px;
+}
+
+.workHeader {
+  display: flex;
+  grid-row: 2 / 3;
+
+  h2 {
+    align-self: flex-end;
+  }
+}
+
+.workInfo {
+  display: flex;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+}
+
+.workButton {
+  display: flex;
+  justify-content: flex-end;
+  grid-row: 2 / 3;
+
+  a {
+    align-self: flex-end;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    font-weight: 600;
+    // font-size: 16px;
+    font-size: inherit;
+    background-color: #fff;
+    display: block;
+    width: fit-content;
+  }
+}

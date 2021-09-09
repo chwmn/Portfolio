@@ -1,0 +1,152 @@
+//worksImage -> images for works lol
+.workImg {
+  //variables for width and height to get same ratio always
+  //   --image-width: calc((100vw - (20px * 4)) / 4);
+  --image-width: 450px;
+
+  --bar-color: #000;
+  --tab-color: #4f4f4f;
+
+  --bar-height: 20px;
+  --dot-size: calc(var(--bar-height) / 5);
+  --dot-radius: calc(var(--dot-size) / 2);
+  --dot-margin: calc(((var(--bar-height) / 2) - var(--dot-size)) / 2);
+
+  --grey-bar-height: calc(var(--bar-height) / 2);
+  --grey-tab-height: calc(var(--dot-size) * 2);
+  --grey-tab-margin: 34px;
+  --grey-tab-width: 60px;
+
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 5px 5px 10px #121212;
+  box-sizing: border-box;
+
+  // height: var(--image-height);
+  width: var(--image-width);
+  height: calc((var(--image-width) * (12 / 23)) + var(--bar-height));
+  //   margin: 20px 0;
+
+  img {
+    box-sizing: border-box;
+    object-fit: cover;
+    height: var(--image-height);
+    width: var(--image-width);
+  }
+
+  a {
+    height: inherit;
+    width: inherit;
+  }
+}
+
+.bar {
+  height: var(--bar-height);
+  background-color: var(--bar-color);
+  position: relative;
+}
+
+.dot {
+  width: var(--dot-size);
+  height: var(--dot-size);
+  background-color: #f44545;
+  border-radius: var(--dot-radius);
+  position: absolute;
+  left: var(--dot-margin);
+  top: var(--dot-margin);
+}
+
+.dot:before {
+  width: var(--dot-size);
+  height: var(--dot-size);
+  content: "";
+  background-color: #edb24a;
+  border-radius: var(--dot-radius);
+  position: absolute;
+  left: calc(var(--dot-margin) + var(--dot-size));
+}
+
+.dot:after {
+  width: var(--dot-size);
+  height: var(--dot-size);
+  content: "";
+  background-color: #6def48;
+  border-radius: var(--dot-radius);
+  position: absolute;
+  left: calc((var(--dot-margin) + var(--dot-size)) * 2);
+}
+
+.greyBar {
+  background-color: var(--tab-color);
+  position: absolute;
+  display: block;
+  bottom: 0;
+  height: var(--grey-bar-height);
+  width: 100%;
+
+  span {
+    display: block;
+    color: #fff;
+    font-family: "NeueMontreal", sans-serif;
+    font-size: 6px;
+    margin-left: 6px;
+    margin-top: 2px;
+  }
+}
+
+.greyBar:before {
+  background-color: var(--tab-color);
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: calc(var(--grey-bar-height) - 2px);
+  height: calc(var(--grey-tab-height) + 2px);
+  width: calc(var(--grey-tab-height) / 2);
+  left: calc(var(--grey-tab-margin) - (var(--grey-tab-height) / 2));
+  border-radius: var(--dot-radius) var(--dot-radius) 0 var(--dot-radius);
+}
+
+.greyBar:after {
+  background-color: var(--tab-color);
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: calc(var(--grey-bar-height) - 2px);
+  height: calc(var(--grey-tab-height) + 2px);
+  width: calc(var(--grey-tab-height) / 2);
+  left: calc(var(--grey-tab-margin) + var(--grey-tab-width));
+  border-radius: var(--dot-radius) var(--dot-radius) var(--dot-radius) 0;
+}
+
+.greyTab {
+  background-color: var(--tab-color);
+  position: absolute;
+  display: block;
+  bottom: calc(var(--grey-bar-height) - 2px);
+  height: calc(var(--grey-tab-height) + 2px);
+  width: var(--grey-tab-width);
+  left: var(--grey-tab-margin);
+  border-radius: var(--dot-radius) var(--dot-radius) 0 0;
+}
+
+.greyTab:before {
+  background-color: var(--bar-color);
+  position: absolute;
+  display: block;
+  content: "";
+  height: var(--grey-tab-height);
+  width: calc(var(--grey-bar-height) / 2);
+  left: calc(var(--grey-bar-height) / -2);
+  border-radius: 0 0 var(--dot-radius) 0;
+}
+
+.greyTab:after {
+  background-color: var(--bar-color);
+  position: absolute;
+  display: block;
+  content: "";
+  height: var(--grey-tab-height);
+  width: calc(var(--grey-bar-height) / 2);
+  left: var(--grey-tab-width);
+  border-radius: 0 0 0 var(--dot-radius);
+}

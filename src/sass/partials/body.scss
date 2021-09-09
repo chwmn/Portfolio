@@ -11,6 +11,10 @@ body {
 .container {
   font-family: "neue-haas-grotesk-display", sans-serif;
 
+  h1 {
+    font-family: inherit;
+  }
+
   h2 {
     font-family: inherit;
   }
@@ -30,90 +34,32 @@ body {
   }
 }
 
-.works {
-  font-size: 20px;
-  width: 300px;
+.container header {
+  margin: 20px 40px;
+  height: 200px;
 
-  h2 {
+  h1 {
+    color: #ffffff;
+    font-size: 54px;
+    font-weight: 600;
+    display: block;
     text-transform: uppercase;
-    color: #ffffff;
-    // font-size: 16px;
-    font-weight: 500;
-    line-height: 1.2;
-    font-size: inherit;
-  }
-
-  p {
-    color: #ffffff;
-    // font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.7px;
-    line-height: 1.4;
-    font-size: 18px;
   }
 }
 
-.workImg {
-  margin: 20px;
-  --image-width: 300px;
+@media screen and (max-width: 1200px) {
+  // .indWorks {
+  //   grid-template-columns: repeat(2, 1fr);
+  //   grid-template-rows: repeat(2, 1fr);
+  // }
 
-  width: var(--image-width);
-  height: calc(var(--image-width) * (12 / 23));
+  // .workInfo {
+  //   grid-columns: 1 / 2;
+  //   grid-row: 2 / 3;
+  // }
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0 0 4px 4px;
-  }
-}
-
-.bar {
-  height: 20px;
-  background-color: #000000;
-  border-radius: 4px 4px 0 0;
-  position: relative;
-  display: block;
-}
-
-.bar:before {
-  background-color: #404040;
-  content: "";
-  display: block;
-  position: relative;
-  height: 8px;
-  top: 12px;
-}
-
-.greyBar {
-  background-color: #404040;
-  display: block;
-  position: absolute;
-  height: 10px;
-  width: 20px;
-  top: 4px;
-  left: 40px;
-  border-radius: 2px 2px 0 0;
-}
-
-.greyBar:before {
-  background-color: #fff;
-  content: "";
-  display: block;
-  width: 4px;
-  height: 8px;
-  position: absolute;
-  left: -4px;
-}
-
-.workButton {
-  padding: 10px 20px;
-  border-radius: 25px;
-  border: none;
-  font-weight: 600;
-  // font-size: 16px;
-  font-size: inherit;
-  background-color: #fff;
-  display: block;
-  width: fit-content;
+  // .workButton {
+  //   grid-columns: 2 / 3;
+  //   grid-row: 2 / 3;
+  // }
 }
