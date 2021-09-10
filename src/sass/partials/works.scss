@@ -1,6 +1,4 @@
 .works {
-  // padding: 20px;
-
   h2 {
     text-transform: uppercase;
     color: #ffffff;
@@ -27,6 +25,21 @@
     letter-spacing: 0.7px;
     line-height: 1.4;
     font-size: 18px;
+    text-transform: uppercase;
+  }
+}
+
+.works header {
+  margin: 20px 40px;
+  height: 200px;
+  display: flex;
+
+  h1 {
+    align-self: flex-end;
+    color: #ffffff;
+    font-size: 54px;
+    font-weight: 600;
+    display: block;
     text-transform: uppercase;
   }
 }
