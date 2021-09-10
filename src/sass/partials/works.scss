@@ -41,13 +41,14 @@
 }
 
 .indWorks {
-  margin: var(--site-padding);
+  margin: calc(var(--site-padding) * 2) var(--site-padding);
   gap: 40px;
   display: grid;
   grid-template-columns: 450px auto auto;
   grid-template-rows: auto auto;
   border-bottom: 1px dotted white;
   padding-bottom: var(--site-padding);
+  // padding-bottom: calc(var(--site-padding) * 2);
 }
 
 .workHeader {
@@ -128,6 +129,7 @@
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   height: fit-content;
+  text-transform: uppercase;
 }
 
 .processSum {
@@ -142,8 +144,8 @@
 }
 
 .processInfo {
-  margin: var(--site-padding);
-  padding-bottom: var(--site-padding);
+  margin: calc(var(--site-padding) * 2) var(--site-padding);
+  padding-bottom: calc(var(--site-padding) * 2);
   border-bottom: 1px dotted #ffffff;
   display: grid;
   grid-template-columns: 200px auto 200px;
