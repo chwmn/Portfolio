@@ -1,0 +1,18 @@
+.container footer {
+  display: flex;
+  margin: var(--site-padding);
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+  ul {
+    width: 50%;
+  }
+
+  li {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 20px 0;
+    text-align: right;
+  }
+}

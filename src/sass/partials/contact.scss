@@ -1,0 +1,29 @@
+.contact {
+  background-color: #ffffff;
+  min-height: 500px;
+}
+
+.contact header {
+  margin: 20px 40px;
+  height: 200px;
+  display: flex;
+
+  h1 {
+    align-self: flex-end;
+    color: #000000;
+    font-size: 54px;
+    font-weight: 600;
+    display: block;
+    text-transform: uppercase;
+  }
+}
+
+.contactInfo {
+  width: 450px;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0 40px;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
