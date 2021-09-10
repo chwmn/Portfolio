@@ -2,7 +2,6 @@
 .workImg {
   //variables for width and height to get same ratio always
   //   --image-width: calc((100vw - (20px * 4)) / 4);
-  --image-width: 450px;
 
   --bar-color: #000;
   --tab-color: #4f4f4f;
@@ -39,6 +38,16 @@
     height: inherit;
     width: inherit;
   }
+}
+
+.homeImg {
+  --image-width: 450px;
+}
+
+.processImg {
+  --image-width: 650px;
+  grid-row: 1 / 3;
+  grid-column: 3 / 4;
 }
 
 .workImg:hover {

@@ -7,9 +7,10 @@ layout: default.html
     <h1>Featured Projects</h1>
   </header>
 
-  {% for work in collections.works %}
+  {% assign works = collections.works | sortByPageOrder %} {% for work in works
+  %}
   <div class="indWorks">
-    <div class="workImg">
+    <div class="workImg homeImg">
       <a href="{{ work.url }}">
         <div class="bar">
           <div class="dot"></div>
@@ -41,15 +42,29 @@ layout: default.html
       </ul>
     </div>
 
-    <div class="workButton">
+    <div class="workButton genButton">
       <a href="{{ work.url }}"> SEE PROCESS </a>
     </div>
   </div>
   {% endfor %}
 </section>
 
-<section class="contact">
+<section class="contact" id="contact">
   <header>
     <h1>Contact</h1>
   </header>
+
+  <div class="contactInfo">
+    <p>
+      What's up, my name is Chulmin Han, and I'm a multidisciplinary artist and
+      designer based out of Dallas, TX. I enjoy making things—from furniture to
+      UI's—that combine both form and function in ways that complement our daily
+      living.
+    </p>
+
+    <p>
+      If you want to talk about hand planes, web design, or the Dallas weather,
+      feel free to shoot me an email!
+    </p>
+  </div>
 </section>

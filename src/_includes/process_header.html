@@ -1,0 +1,36 @@
+<header>
+  <h1>{{ projectTitle }}</h1>
+</header>
+
+<div class="processHeader">
+  <div class="processButton genButton">
+    <a href="{{ finalUrl }}"> FINAL RESULT </a>
+  </div>
+
+  <div class="processCat">
+    <ul>
+      <li>{{ year }}</li>
+
+      {% for cat in categories %}
+      <li>{{ cat }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="processSum">
+    <p>{{ summary }}</p>
+  </div>
+
+  <div class="workImg processImg">
+    <a href="{{ finalUrl }}">
+      <div class="bar">
+        <div class="dot"></div>
+        <div class="greyBar">
+          <span>← →</span>
+        </div>
+        <div class="greyTab"></div>
+      </div>
+      <img src="{{ image }}" alt="" />
+    </a>
+  </div>
+</div>
