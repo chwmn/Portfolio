@@ -1,3 +1,20 @@
+@media all and (max-width: 1300px) {
+  .processHeader {
+    grid-template-columns: auto 650px;
+    grid-template-rows: auto auto auto;
+
+    .processSum {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
+
+    .processImg {
+      grid-row: 2 / 4;
+      grid-column: 2 / 3;
+    }
+  }
+}
+
 @media all and (max-width: 1100px) {
   .works {
     .indWorks {
@@ -13,6 +30,30 @@
         grid-row: 3 / 4;
       }
     }
+  }
+
+  .processHeader {
+    grid-template-columns: calc(100vw - (var(--site-padding) * 2));
+    grid-template-rows: repeat(4, auto);
+
+    .processSum {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+    }
+
+    .processCat {
+      grid-row: 4 / 5;
+    }
+
+    .processImg {
+      grid-row: 3 / 4;
+      grid-column: 1 / 2;
+      --image-width: calc(100vw - (var(--site-padding) * 2));
+    }
+  }
+
+  .processInfo {
+    grid-template-columns: 200px auto 100px;
   }
 }
 
@@ -48,14 +89,19 @@
       }
     }
   }
+
+  .processInfo {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
 }
 
 @media all and (max-width: 450px) {
+  :root {
+    --body-font-size: 14px;
+    --nav-font-size: 20px;
+  }
   .container .site_nav {
-    li a {
-      font-size: 20px;
-    }
-
     .logo {
       width: 24px;
     }
@@ -73,27 +119,16 @@
       .workInfo {
         grid-column: 1 / 2;
         grid-row: 3 / 4;
-
-        p {
-          font-size: 16px;
-        }
       }
 
       .workHeader {
         grid-column: 1 / 2;
-        h2 {
-          font-size: 20px;
-        }
       }
 
       .workCat {
         grid-row: 4 / 5;
         grid-column: 1 / 2;
         text-align: left;
-
-        li {
-          font-size: 16px;
-        }
       }
 
       .workButton {
@@ -112,7 +147,6 @@
 
     li {
       text-align: left;
-      font-size: 16px;
     }
   }
 }
