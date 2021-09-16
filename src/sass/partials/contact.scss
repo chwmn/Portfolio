@@ -1,5 +1,5 @@
 .contact {
-  background-color: #ffffff;
+  background-color: #9fd1a6;
   min-height: 500px;
 }
 
@@ -19,11 +19,41 @@
 }
 
 .contactInfo {
-  width: 250px;
+  // width: 250px;
   font-weight: 500;
   font-size: 18px;
   margin: 0 40px;
-  display: grid;
-  grid-template-rows: auto auto;
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.emailForm {
+  width: 300px;
+
+  label {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: calc(var(--body-font-size) + 2px);
+    margin: 0 0 10px 0;
+    display: block;
+  }
+
+  input,
+  textarea {
+    font-size: var(--body-font-size);
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+  }
+}
+
+.formSection {
+  width: 100%;
+  display: block;
+  margin-bottom: 30px;
 }
