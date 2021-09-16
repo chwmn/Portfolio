@@ -1,16 +1,16 @@
 ---
 layout: default.html
-projectTitle: computer museum redesign
+projectTitle: Computer Museum Redesign
 year: summer 2021
 summary: "A redesign of a site based on findings from a heuristic evaluation,
 ultimately presented through a developed responsive site. This project
 had a heavy emphasis on solving established usability issues. The final
-site was developed using HTML and Sass within 11ty."
+site was developed using HTML and SASS with 11ty."
 
 tags: works
 categories: ["HTML", "SASS", "11ty"]
 image: /assets/images/CMR01.png
-order: 1
+order: 2
 finalUrl: "https://pensive-brown-755bf3.netlify.app"
 ---
 
@@ -72,57 +72,106 @@ finalUrl: "https://pensive-brown-755bf3.netlify.app"
     <h2>High Level Priority Guide</h2>
 
     <div>
-      <div class="processImg">
-        <img src="/assets/images/CMR_PG01.png" alt="" />
-      </div>
-      <div class="space"></div>
       <p>
         In line with the established user and business goals as well as the
         identified problems, I created a high level priority guide and sorted
         the topics from greatest importance to least.
       </p>
+
+      <div class="space"></div>
+
+      <div class="processPictures">
+        <img
+          src="/assets/images/CMR_PG01.png"
+          alt="High level priority guide."
+        />
+      </div>
     </div>
   </div>
 
   <div class="processInfo">
     <h2>Detailed Priority Guide</h2>
     <div>
-      <div class="processImg">
-        <img src="/assets/images/CMR_PG02.png" alt="" />
-      </div>
-      <div class="space"></div>
       <p>
         I then organized the remaining site content into a detailed priority
         guide.
       </p>
+
+      <div class="space"></div>
+      <div class="processPictures">
+        <img src="/assets/images/CMR_PG02.png" alt="Detailed priority guide." />
+      </div>
+    </div>
+  </div>
+
+  <div class="processInfo">
+    <h2>Wireframe</h2>
+
+    <div>
+      <div class="processPictures">
+        <img src="/assets/images/CMR02.png" alt="Mobile wireframe." />
+        <p>Mobile wireframe made in Adobe Xd.</p>
+      </div>
+      <div class="processPictures">
+        <img src="/assets/images/CMR03.png" alt="Web Wireframe." />
+        <p>Web wireframe made in Adobe Xd.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="processInfo">
+    <h2>Mock up</h2>
+
+    <div>
+      <div class="processPictures">
+        <img src="/assets/images/CMR04.jpg" alt="Mobile mock up." />
+        <p>Mobile mock up made in Adobe Illustrator.</p>
+      </div>
+      <div class="processPictures">
+        <img src="/assets/images/CMR05.jpg" alt="Web mock up." />
+        <p>Web mock up made in Adobe Illustrator.</p>
+      </div>
     </div>
   </div>
 
   <div class="processInfo">
     <h2>First Developed Site</h2>
     <div>
-      <div class="processImg">
-        <img src="/assets/images/CMR_S1_01.png" alt="" />
-      </div>
-      <div class="space"></div>
-      <div class="processImg">
-        <img src="/assets/images/CMR_S1_02.png" alt="" />
-      </div>
-      <div class="space"></div>
-      <div class="processImg">
-        <img src="/assets/images/CMR_S1_03.png" alt="" />
-      </div>
-      <div class="space"></div>
-      <div class="processImg">
-        <img src="/assets/images/CMR_S1_04.png" alt="" />
-      </div>
-      <div class="space"></div>
       <p>
         The final aspect of this project was to develop the site in 11ty using
-        HTML and SASS. We also utilized Glitch to facilitate more efficient
+        HTML and SASS. I also utilized Glitch to facilitate more efficient
         commenting and site sharing. Unsatisfied with the original color scheme,
         I opted to go for a more computer related aesthetic.
       </p>
+      <div class="space"></div>
+      <div class="processPictures">
+        <img
+          src="/assets/images/CMR_S1_01.png"
+          alt="Home page of first developed site."
+        />
+        <p>Home page with appointment and tour buttons.</p>
+      </div>
+      <div class="processPictures">
+        <img
+          src="/assets/images/CMR_S1_02.png"
+          alt="Gallery page of first developed site."
+        />
+        <p>Gallery page with different categories.</p>
+      </div>
+      <div class="processPictures">
+        <img
+          src="/assets/images/CMR_S1_03.png"
+          alt="Contact page of first developed site."
+        />
+        <p>Contact page with appointment selection.</p>
+      </div>
+      <div class="processPictures">
+        <img
+          src="/assets/images/CMR_S1_04.png"
+          alt="About page of first developed site."
+        />
+        <p>About page with relevant information.</p>
+      </div>
     </div>
   </div>
 
@@ -145,17 +194,41 @@ finalUrl: "https://pensive-brown-755bf3.netlify.app"
         would lead the user to the gallery items but I scrapped it in favor of a
         more straight forward approach.
       </p>
+
+      <div class="space"></div>
+      <div class="processPictures">
+        <img src="/assets/images/CMR06.png" alt="Mobile prototype." />
+        <p>Prototype for mobile screen size.</p>
+      </div>
+      <div class="processPictures">
+        <img src="/assets/images/CMR07.png" alt="Web prototype." />
+        <p>Prototype for web screen size.</p>
+      </div>
     </div>
   </div>
 
   <div class="processInfo">
-    <h2>Second and final site</h2>
-    <p>
-      The final site was created in 11ty using HTML and SASS, however this time,
-      without the use of glitch. The gallery and its contents were created using
-      pagination within 11ty. This site has a bigger emphasis on the warning,
-      appointment button, and virtual tour button than the previous version, and
-      makes sure to put the museum information front and center.
-    </p>
+    <div class="head">
+      <h2>Second and final site</h2>
+
+      <div class="processButton genButton">
+        <a href="{{ finalUrl }}"> FINAL RESULT </a>
+      </div>
+    </div>
+
+    <div>
+      <p>
+        The final site was created using HTML and SASS with 11ty, however this
+        time, without the use of glitch. The gallery and its contents were
+        created using pagination within 11ty. This site has a bigger emphasis on
+        the warning, appointment button, and virtual tour button than the
+        previous version, and makes sure to put the museum information front and
+        center.
+      </p>
+      <div class="space"></div>
+      <div class="processPictures">
+        <img src="/assets/images/CMR01.png" alt="Final developed site." />
+      </div>
+    </div>
   </div>
 </section>
