@@ -71,11 +71,16 @@ layout: default.html
   <form name="contact" class="emailForm" action="/form" netlify>
     <div class="formSection">
       <label for="name">Name</label>
-      <input type="text" id="name" placeholder="Hafthor Bjornson" />
+      <input type="text" name="name" id="name" placeholder="Hafthor Bjornson" />
     </div>
     <div class="formSection">
       <label for="email">Email</label>
-      <input type="email" id="email" placeholder="EddieHall@dehydrated.com" />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="EddieHall@dehydrated.com"
+      />
     </div>
     <div class="formSection">
       <label for="message">Message</label>
