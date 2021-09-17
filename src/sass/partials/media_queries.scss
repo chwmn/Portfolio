@@ -58,10 +58,10 @@
 
   .contactInfo {
     flex-wrap: wrap;
-    grid-row: 2 / 4;
 
     p {
       width: 100%;
+      height: fit-content;
     }
   }
 }
