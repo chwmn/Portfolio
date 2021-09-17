@@ -13,10 +13,36 @@
     color: #ffffff;
     text-transform: uppercase;
     margin: 20px 0;
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
   }
 
   a {
     color: #ffffff;
+  }
+}
+
+.lin {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: #fff;
+  text-transform: none;
+
+  p {
+    font-family: myriad-pro, sans-serif;
+
+    font-weight: 700;
+
+    font-style: normal;
+    color: #1f1f1f;
+    width: fit-content;
+    height: fit-content;
+    font-size: 30px;
+    display: block;
+    margin: auto;
+    line-height: 80%;
+    letter-spacing: -1px;
   }
 }
