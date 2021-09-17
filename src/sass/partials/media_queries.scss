@@ -55,6 +55,15 @@
   .processInfo {
     grid-template-columns: 200px auto 100px;
   }
+
+  .contactInfo {
+    flex-wrap: wrap;
+    grid-row: 2 / 4;
+
+    p {
+      width: 100%;
+    }
+  }
 }
 
 @media all and (max-width: 800px) {
@@ -93,6 +102,25 @@
   .processInfo {
     grid-template-columns: auto;
     grid-template-rows: auto auto;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .contact header {
+    grid-column: 1 / 2;
+  }
+
+  .contactInfo {
+    grid-row: 2 / 3;
+  }
+
+  .emailForm {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    width: 100%;
   }
 }
 

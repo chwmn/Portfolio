@@ -41,7 +41,8 @@
 }
 
 .indWorks {
-  margin: calc(var(--site-padding) * 2) var(--site-padding);
+  margin: calc(var(--site-padding) * 2) var(--site-padding) var(--site-padding)
+    var(--site-padding);
   gap: 40px;
   display: grid;
   grid-template-columns: 450px auto auto;
