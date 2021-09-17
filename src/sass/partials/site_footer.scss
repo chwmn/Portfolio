@@ -1,20 +1,20 @@
 .container footer {
   display: flex;
-  margin: var(--site-padding);
-  justify-content: flex-end;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  margin: var(--site-padding);
 
   ul {
     width: 50%;
   }
 
   li {
-    font-size: var(--body-font-size);
     color: #ffffff;
-    text-transform: uppercase;
-    margin: 20px 0;
     display: flex;
+    font-size: var(--body-font-size);
     justify-content: flex-end;
+    margin: 20px 0;
+    text-transform: uppercase;
   }
 
   a {
@@ -23,26 +23,24 @@
 }
 
 .lin {
-  display: flex;
-  width: 30px;
-  height: 30px;
-  border-radius: 2px;
   background-color: #fff;
+  border-radius: 2px;
+  display: flex;
+  height: 30px;
   text-transform: none;
+  width: 30px;
 
   p {
-    font-family: myriad-pro, sans-serif;
-
-    font-weight: 700;
-
-    font-style: normal;
     color: #1f1f1f;
-    width: fit-content;
-    height: fit-content;
-    font-size: 30px;
     display: block;
-    margin: auto;
-    line-height: 80%;
+    font-family: myriad-pro, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    height: fit-content;
     letter-spacing: -1px;
+    line-height: 80%;
+    margin: auto;
+    width: fit-content;
   }
 }

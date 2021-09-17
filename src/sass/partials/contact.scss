@@ -1,70 +1,70 @@
 .contact {
-  padding: 20px 40px 40px 40px;
-  gap: 40px 80px;
   background-color: #9fd1a6;
   display: grid;
+  gap: 40px 80px;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(3, auto);
+  padding: 20px 40px 40px 40px;
 }
 
 .contact header {
-  height: 200px;
   display: flex;
   grid-column: 1 / 3;
   grid-row: 1 / 2;
+  height: 200px;
 
   h1 {
     align-self: flex-end;
     color: #000000;
+    display: block;
     font-size: 54px;
     font-weight: 600;
-    display: block;
     text-transform: uppercase;
   }
 }
 
 .contactInfo {
-  // width: 250px;
-  font-weight: 600;
+  display: flex;
   font-size: calc(var(--body-font-size) + 2px);
+  font-weight: 600;
+  gap: 80px;
   grid-column: 1 / 2;
   grid-row: 3 / 4;
-  display: flex;
-  gap: 80px;
+
   p {
-    width: 50%;
     align-self: flex-end;
     letter-spacing: 0.6px;
+    width: 50%;
   }
 }
 
 .emailForm {
-  width: 350px;
-  grid-column: 2 / 3;
-  grid-row: 2 / 4;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  grid-column: 2 / 3;
+  grid-row: 2 / 4;
+  width: 350px;
 
   label {
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: calc(var(--body-font-size) + 2px);
-    margin: 0 0 10px 0;
     display: block;
+    font-size: calc(var(--body-font-size) + 2px);
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
   }
 
   input,
   textarea {
-    font-size: var(--body-font-size);
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-    outline: none;
     border: none;
     border-radius: 3px;
+    box-sizing: border-box;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-size: var(--body-font-size);
     letter-spacing: 0.6px;
+    outline: none;
+    padding: 10px;
+    width: 100%;
   }
 
   textarea {
@@ -73,8 +73,8 @@
 }
 
 .formSection {
-  width: 100%;
   display: block;
+  width: 100%;
 }
 
 .submit {
@@ -83,21 +83,20 @@
 
 input[type="submit"] {
   align-self: flex-end;
-  padding: 10px 20px;
-  border-radius: 25px;
-  border: none;
-  font-weight: 600;
-  font-size: inherit;
   background-color: #000;
+  border: none;
+  border-radius: 25px;
   color: #fff;
   display: block;
-  width: 150px;
-  text-align: center;
-  letter-spacing: 0.7px;
   font-size: calc(var(--body-font-size) + 2px);
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  padding: 10px 20px;
+  text-align: center;
+  width: 150px;
 }
 
 input[type="submit"]:hover {
-  font-style: italic;
   cursor: pointer;
+  font-style: italic;
 }

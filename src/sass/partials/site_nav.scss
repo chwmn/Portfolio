@@ -2,16 +2,16 @@
   border-bottom: 1px dotted white;
 
   ul {
-    width: fill;
     box-sizing: border-box;
-    margin: 20px 40px;
     display: flex;
     justify-content: space-between;
+    margin: 20px 40px;
+    width: fill;
   }
 
   li {
-    height: fit-content;
     align-self: center;
+    height: fit-content;
   }
 
   a {
@@ -21,8 +21,8 @@
 }
 
 .logo {
-  width: 30px;
   display: block;
+  width: 30px;
 
   img {
     width: inherit;
