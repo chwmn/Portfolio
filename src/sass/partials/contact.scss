@@ -29,7 +29,7 @@
 }
 
 .contactInfo {
-  display: flex;
+  display: grid;
   gap: 80px;
   grid-column: 1 / 2;
   grid-row: 3 / 4;
@@ -40,9 +40,9 @@
     width: 50%;
   }
 }
+
 .emailForm {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 30px;
   grid-column: 2 / 3;
   grid-row: 2 / 4;
@@ -58,6 +58,9 @@
 
   input,
   textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     border: none;
     border-radius: 3px;
     box-sizing: border-box;
@@ -86,6 +89,7 @@
 input[type="submit"] {
   align-self: flex-end;
   background-color: #000;
+  background-image: none;
   border: none;
   border-radius: 25px;
   color: #fff;
@@ -117,8 +121,7 @@ input[type="submit"]:hover {
 
 //the Ps
 .messageSent {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   min-height: 100px;
   gap: 20px;
 
