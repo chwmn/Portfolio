@@ -1,11 +1,9 @@
 .works {
+  border-top: 1px dotted white;
+
   h2 {
     color: #ffffff;
     font-size: var(--nav-font-size);
-    font-weight: 600;
-    letter-spacing: 1px;
-    line-height: 1.2;
-    text-transform: uppercase;
   }
 
   p {
@@ -32,9 +30,7 @@
     align-self: flex-end;
     color: #ffffff;
     display: block;
-    font-size: 54px;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-size: var(--header-font-size);
   }
 }
 
@@ -91,7 +87,7 @@
     letter-spacing: 0.7px;
     padding: 10px 20px;
     text-align: center;
-    width: 150px;
+    width: 170px;
   }
 }
 

@@ -2,6 +2,7 @@
   --body-font-size: 18px;
   --nav-font-size: 24px;
   --site-padding: 40px;
+  --header-font-size: 54px;
 
   scroll-behavior: smooth;
 }
@@ -16,10 +17,16 @@ body {
 
   h1 {
     font-family: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 
   h2 {
     font-family: inherit;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    text-transform: uppercase;
   }
 
   p {

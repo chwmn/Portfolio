@@ -1,6 +1,4 @@
 .site_nav {
-  border-bottom: 1px dotted white;
-
   ul {
     box-sizing: border-box;
     display: flex;
@@ -18,13 +16,21 @@
     color: #ffffff;
     font-size: var(--nav-font-size);
   }
+
+  li:hover {
+    font-style: italic;
+  }
 }
 
 .logo {
   display: block;
-  width: 30px;
+  // width: 30px;
+  width: fit-content;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.6px;
 
-  img {
-    width: inherit;
-  }
+  // img {
+  //   width: inherit;
+  // }
 }
