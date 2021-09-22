@@ -33,7 +33,7 @@ layout: default.html
 
     <div class="workCat">
       <ul>
-        <li>{{ work.data.year }}</li>
+        <!-- <li>{{ work.data.year }}</li> -->
 
         {% assign category = work.data.categories %} {% for category in category
         %}
@@ -47,6 +47,26 @@ layout: default.html
     </div>
   </div>
   {% endfor %}
+</section>
+
+<section class="otherWorks">
+  <header>
+    <h1>Other Works</h1>
+  </header>
+
+  <div class="indOtherWorks">
+    <div class="otherWorksImg">
+      <img src="/assets/images/PoplarTable01.jpg" alt="" />
+    </div>
+
+    <div class="otherWorksHeader">
+      <h2>heritage furniture</h2>
+    </div>
+
+    <div class="otherWorksButton genButton">
+      <a href="">SEE MORE</a>
+    </div>
+  </div>
 </section>
 
 <section class="contact contactGrid" id="contact">

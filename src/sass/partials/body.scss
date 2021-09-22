@@ -19,6 +19,7 @@ body {
     font-family: inherit;
     font-weight: 600;
     text-transform: uppercase;
+    font-size: var(--header-font-size);
   }
 
   h2 {
@@ -27,6 +28,7 @@ body {
     letter-spacing: 1px;
     line-height: 1.2;
     text-transform: uppercase;
+    font-size: var(--nav-font-size);
   }
 
   p {

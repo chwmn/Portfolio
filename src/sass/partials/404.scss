@@ -1,12 +1,13 @@
 .pnf {
   background-color: #ffffff;
   min-height: 80vh;
-  padding: 20px 40px 40px 40px;
+  padding: calc(var(--site-padding) / 2) var(--site-padding) var(--site-padding)
+    var(--site-padding);
   display: flex;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: var(--site-padding);
 
   p {
     height: fit-content;
@@ -22,6 +23,5 @@
 
   h1 {
     align-self: flex-end;
-    font-size: var(--header-font-size);
   }
 }

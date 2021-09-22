@@ -3,7 +3,6 @@
 
   h2 {
     color: #ffffff;
-    font-size: var(--nav-font-size);
   }
 
   p {
@@ -24,13 +23,12 @@
 .works header {
   display: flex;
   height: 200px;
-  margin: 20px 40px;
+  margin: calc(var(--site-padding) / 2) var(--site-padding);
 
   h1 {
     align-self: flex-end;
     color: #ffffff;
     display: block;
-    font-size: var(--header-font-size);
   }
 }
 

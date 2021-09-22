@@ -1,6 +1,7 @@
 .contact {
   background-color: #9fd1a6;
-  padding: 20px 40px 40px 40px;
+  padding: calc(var(--site-padding) / 2) var(--site-padding) var(--site-padding)
+    var(--site-padding);
 
   p {
     font-size: calc(var(--body-font-size) + 2px);
@@ -9,7 +10,7 @@
 
 .contactGrid {
   display: grid;
-  gap: 40px 80px;
+  gap: var(--site-padding) calc(var(--site-padding) * 2);
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(3, auto);
 }
@@ -24,13 +25,12 @@
     align-self: flex-end;
     color: #000000;
     display: block;
-    font-size: var(--header-font-size);
   }
 }
 
 .contactInfo {
   display: flex;
-  gap: 80px;
+  gap: calc(var(--site-padding) * 2);
   grid-column: 1 / 2;
   grid-row: 3 / 4;
 
@@ -43,7 +43,7 @@
 
 .emailForm {
   display: grid;
-  gap: 30px;
+  gap: var(--site-padding);
   grid-column: 2 / 3;
   grid-row: 2 / 4;
   width: 350px;
@@ -115,7 +115,7 @@ input[type="submit"]:hover {
   grid-template-rows: auto 100px;
   grid-template-columns: 1fr;
   align-items: flex-end;
-  gap: 40px;
+  gap: var(--site-padding);
   min-height: 80vh;
 }
 
@@ -123,7 +123,7 @@ input[type="submit"]:hover {
 .messageSent {
   display: grid;
   min-height: 100px;
-  gap: 20px;
+  gap: calc(var(--site-padding) / 2);
 
   p {
     width: 100%;
