@@ -32,6 +32,10 @@
     }
   }
 
+  .contactInfo {
+    display: grid;
+  }
+
   .processHeader {
     grid-template-columns: calc(100vw - (var(--site-padding) * 2));
     grid-template-rows: repeat(4, auto);

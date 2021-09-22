@@ -29,7 +29,7 @@
 }
 
 .contactInfo {
-  display: grid;
+  display: flex;
   gap: 80px;
   grid-column: 1 / 2;
   grid-row: 3 / 4;
@@ -133,9 +133,5 @@ input[type="submit"]:hover {
   p a {
     font-weight: 600;
     text-decoration: underline;
-  }
-
-  p a:hover {
-    font-style: italic;
   }
 }
