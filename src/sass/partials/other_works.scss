@@ -1,24 +1,42 @@
 .otherWorks {
   background-color: #ffffff;
   padding: 20px 40px 40px 40px;
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  // grid-template-rows: repeat(2, auto);
+
+  display: block;
+  gap: calc(var(--site-padding) * 2) var(--site-padding);
 }
 
 .otherWorks header {
   height: 150px;
   display: flex;
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
 
   h1 {
     align-self: flex-end;
   }
 }
 
+.otherWorksFlex {
+  // display: flex;
+  // flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--site-padding) * 2) var(--site-padding);
+  margin: calc(var(--site-padding) * 2) 0 var(--site-padding) 0;
+  justify-content: center;
+}
+
 .indOtherWorks {
-  width: 300px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);
   gap: 20px;
-  margin: calc(var(--site-padding) * 2) 0 var(--site-padding) 0;
+  justify-content: center;
+  // margin: calc(var(--site-padding) * 2) 0 var(--site-padding) 0;
 
   h2 {
     text-align: center;
@@ -26,13 +44,24 @@
 }
 
 .otherWorksImg {
-  width: 300px;
-  height: 300px;
+  // --image-size: 300px;
+
+  // width: var(--image-size);
+  // height: var(--image-size);
+  width: 100%;
+  height: calc((100vw - (var(--site-padding) * 4)) / 3);
+  justify-self: center;
+
+  a {
+    width: inherit;
+    height: inherit;
+  }
 
   img {
     width: inherit;
     height: inherit;
-    object-fit: contain;
+    margin: 0 auto;
+    object-fit: cover;
   }
 }
 

@@ -54,18 +54,27 @@ layout: default.html
     <h1>Other Works</h1>
   </header>
 
-  <div class="indOtherWorks">
-    <div class="otherWorksImg">
-      <img src="/assets/images/PoplarTable01.jpg" alt="" />
+  <div class="otherWorksFlex">
+    {% assign other = collections.other %} {% for item in other %}
+    <div class="indOtherWorks">
+      <div class="otherWorksImg">
+        <a href="{{ item.url }}">
+          <img src="{{ item.data.image }}" alt="{{ item.data.pageTitle }}" />
+        </a>
+      </div>
+
+      <div class="otherWorksHeader">
+        <a href="{{ item.url }}">
+          <h2>{{ item.data.pageTitle }}</h2>
+        </a>
+      </div>
+
+      <div class="otherWorksButton genButton">
+        <a href="{{ item.url }}">SEE MORE</a>
+      </div>
     </div>
 
-    <div class="otherWorksHeader">
-      <h2>heritage furniture</h2>
-    </div>
-
-    <div class="otherWorksButton genButton">
-      <a href="">SEE MORE</a>
-    </div>
+    {% endfor %}
   </div>
 </section>
 

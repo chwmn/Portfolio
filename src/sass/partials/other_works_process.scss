@@ -1,0 +1,65 @@
+.otherWorksProcess {
+  background-color: #ffffff;
+  padding: calc(var(--site-padding) / 2) var(--site-padding) 0
+    var(--site-padding);
+  //padding bottom is 0 because margin bottom of img div has margin on it
+
+  h2 {
+    color: #000000;
+  }
+
+  p {
+    color: #000000;
+    font-size: var(--body-font-size);
+    font-weight: 400;
+  }
+
+  li {
+    color: #000000;
+    font-size: var(--body-font-size);
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    line-height: 1.4;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.otherWorksProcess header {
+  display: flex;
+  height: 200px;
+
+  h1 {
+    align-self: flex-end;
+    color: #000000;
+    display: block;
+  }
+}
+
+.otherWorksProcessContent {
+  display: grid;
+  grid-template-columns: 300px 600px;
+  gap: var(--site-padding);
+  //   margin-top: calc(var(--site-padding) * 2);
+  margin-top: var(--site-padding);
+  justify-content: space-between;
+  //   position: relative;
+}
+
+.otherWorksProcessHeader {
+  grid-column: 1 / 2;
+
+  p {
+    top: 40px;
+    position: sticky;
+    display: block;
+  }
+}
+
+.otherWorksProcessImg {
+  img {
+    margin-bottom: var(--site-padding);
+  }
+}
