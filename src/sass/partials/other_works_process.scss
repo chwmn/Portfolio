@@ -63,3 +63,8 @@
     margin-bottom: var(--site-padding);
   }
 }
+
+.blackBorder {
+  box-sizing: border-box;
+  border: 10px solid #000000;
+}
