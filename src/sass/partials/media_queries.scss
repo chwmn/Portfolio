@@ -215,16 +215,4 @@
       text-align: left;
     }
   }
-
-  .otherWorks .otherWorksImg {
-    --image-size: 240px;
-  }
-
-  .otherWorks .otherWorksFlex {
-    grid-template-columns: repeat(2, 1fr);
-
-    .otherWorksImg {
-      height: calc((100vw - (var(--site-padding) * 3)) / 2);
-    }
-  }
 }
