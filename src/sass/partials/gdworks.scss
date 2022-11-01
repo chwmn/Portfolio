@@ -1,0 +1,18 @@
+.gdWorks header {
+  display: flex;
+  height: 200px;
+  margin: calc(var(--site-padding) / 2) var(--site-padding);
+
+  h1 {
+    align-self: flex-end;
+    color: #ffffff;
+    display: block;
+  }
+}
+
+.gdWorksImg {
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+  display: block;
+}

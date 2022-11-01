@@ -2,9 +2,34 @@
 layout: default.html
 ---
 
+<section id="gdWorks" class="gdWorks">
+  <header>
+    <h1>graphic design</h1>
+  </header>
+  <div>
+    <div>
+      <div>
+        <a href="" class="gdWorksImg">
+          <img src="" alt="" />
+        </a>
+      </div>
+
+      <div>
+        <a href="">
+          <h2>title</h2>
+        </a>
+      </div>
+
+      <div>
+        <a href="">button</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="works" class="works">
   <header>
-    <h1>Featured Projects</h1>
+    <h1>UI/UX and Web Development</h1>
   </header>
 
   {% assign works = collections.works | sortByPageOrder %} {% for work in works
@@ -49,7 +74,7 @@ layout: default.html
   {% endfor %}
 </section>
 
-<section class="otherWorks" id="otherWorks">
+<section id="otherWorks" class="otherWorks">
   <header>
     <h1>Other Works</h1>
   </header>
@@ -78,7 +103,7 @@ layout: default.html
   </div>
 </section>
 
-<section class="contact contactGrid" id="contact">
+<section id="contact" class="contact contactGrid">
   <header>
     <h1>Contact</h1>
   </header>
