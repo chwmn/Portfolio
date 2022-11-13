@@ -1,3 +1,26 @@
+.gdWorks {
+  border-top: 1px dotted #ffffff;
+  background-color: #ffffff;
+
+  h2 {
+    color: #000000;
+  }
+
+  p {
+    color: #ffffff;
+    font-size: var(--body-font-size);
+    font-weight: 400;
+  }
+
+  li {
+    color: #ffffff;
+    font-size: var(--body-font-size);
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    line-height: 1.4;
+  }
+}
+
 .gdWorks header {
   display: flex;
   height: 200px;
@@ -5,14 +28,51 @@
 
   h1 {
     align-self: flex-end;
-    color: #ffffff;
+    color: #000000;
     display: block;
   }
 }
 
-.gdWorksImg {
+.gdWorksPosts {
+  display: flex;
+  margin: calc(var(--site-padding) / 2) var(--site-padding);
+  gap: 20px;
+}
+
+.gdWorksIndPost {
   width: 200px;
   height: 200px;
   border: 1px solid red;
   display: block;
+  position: relative;
+
+  h2 {
+    // opacity: 1;
+    opacity: 0;
+    font-style: italic;
+    bottom: 0;
+    margin: 5%;
+    width: 90%;
+
+    position: absolute;
+    text-align: center;
+  }
+}
+
+.gdWorksIndPost:hover {
+  h2 {
+    animation-name: postHover;
+    animation-duration: 0.5s;
+    opacity: 1;
+  }
+}
+
+@keyframes postHover {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
