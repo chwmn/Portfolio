@@ -8,29 +8,22 @@ layout: default.html
   </header>
   <div>
     <div class="gdWorksPosts">
-      <div>
-        <a href="" class="gdWorksIndPost">
-          <img src="" alt="" />
-
-          <h2>title</h2>
+      {% assign other = collections.gd %} {% for item in other %}
+    <div>
+      <div class="otherWorksImg">
+        <a href="{{ item.url }}">
+          <img src="{{ item.data.image }}" alt="{{ item.data.pageTitle }}" />
         </a>
       </div>
 
-      <div>
-        <a href="" class="gdWorksIndPost">
-          <img src="" alt="" />
-
-          <h2>title</h2>
+      <div class="otherWorksHeader">
+        <a href="{{ item.url }}">
+          <h2>{{ item.data.pageTitle }}</h2>
         </a>
       </div>
+    </div>
 
-      <div>
-        <a href="" class="gdWorksIndPost">
-          <img src="" alt="" />
-
-          <h2>title</h2>
-        </a>
-      </div>
+    {% endfor %}
     </div>
   </div>
 </section>
@@ -87,7 +80,7 @@ layout: default.html
     <h1>Other Works</h1>
   </header>
 
-  <div class="otherWorksFlex">
+  <div class="otherWorksGrid">
     {% assign other = collections.other %} {% for item in other %}
     <div class="indOtherWorks">
       <div class="otherWorksImg">
