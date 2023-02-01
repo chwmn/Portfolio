@@ -7,20 +7,24 @@ layout: default.html
     <h1>graphic design</h1>
   </header>
   <div>
-    <div class="gdWorksPosts">
+    <div class="gdWorksGrid">
       {% assign other = collections.gd %} {% for item in other %}
-    <div>
-      <div class="otherWorksImg">
+    <div class="indGdWorks">
+      <div class="gdWorksImg">
         <a href="{{ item.url }}">
           <img src="{{ item.data.image }}" alt="{{ item.data.pageTitle }}" />
         </a>
       </div>
 
-      <div class="otherWorksHeader">
+      <div class="gdWorksHeader">
         <a href="{{ item.url }}">
           <h2>{{ item.data.pageTitle }}</h2>
         </a>
       </div>
+<!-- 
+      <div class="gdWorksButton genButton">
+        <a href="{{ item.url }}">SEE MORE</a>
+      </div> -->
     </div>
 
     {% endfor %}
@@ -89,7 +93,7 @@ layout: default.html
         </a>
       </div>
 
-      <div class="otherWorksHeader">
+      <div>
         <a href="{{ item.url }}">
           <h2>{{ item.data.pageTitle }}</h2>
         </a>

@@ -1,19 +1,14 @@
 .otherWorks {
   background-color: #ffffff;
-  padding: 20px 40px 40px 40px;
-  // display: grid;
-  // grid-template-columns: repeat(3, 1fr);
-  // grid-template-rows: repeat(2, auto);
-
   display: block;
-  gap: calc(var(--site-padding) * 2) var(--site-padding);
+  padding: 20px 40px 40px 40px;
 }
 
 .otherWorks header {
-  height: 150px;
   display: flex;
   grid-column: 1 / 4;
   grid-row: 1 / 2;
+  height: 150px;
 
   h1 {
     align-self: flex-end;
@@ -24,17 +19,17 @@
   // display: flex;
   // flex-wrap: wrap;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: calc(var(--site-padding) * 2) var(--site-padding);
-  margin: calc(var(--site-padding) * 2) 0 var(--site-padding) 0;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
+  margin: calc(var(--site-padding) * 2) 0 var(--site-padding) 0;
 }
 
 .indOtherWorks {
   display: grid;
+  gap: 20px;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);
-  gap: 20px;
   justify-content: center;
   // margin: calc(var(--site-padding) * 2) 0 var(--site-padding) 0;
 
@@ -48,20 +43,20 @@
 
   // width: var(--image-size);
   // height: var(--image-size);
-  width: 100%;
   height: calc((100vw - (var(--site-padding) * 4)) / 2);
   justify-self: center;
+  width: 100%;
 
   a {
-    width: inherit;
     height: inherit;
+    width: inherit;
   }
 
   img {
-    width: inherit;
     height: inherit;
     margin: 0 auto;
     object-fit: cover;
+    width: inherit;
   }
 }
 

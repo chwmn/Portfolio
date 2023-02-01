@@ -1,30 +1,12 @@
 .gdWorks {
-  border-top: 1px dotted #ffffff;
   background-color: #ffffff;
-
-  h2 {
-    color: #000000;
-  }
-
-  p {
-    color: #ffffff;
-    font-size: var(--body-font-size);
-    font-weight: 400;
-  }
-
-  li {
-    color: #ffffff;
-    font-size: var(--body-font-size);
-    font-weight: 400;
-    letter-spacing: 0.7px;
-    line-height: 1.4;
-  }
+  display: block;
+  padding: 20px 40px 40px 40px;
 }
 
 .gdWorks header {
   display: flex;
-  height: 200px;
-  margin: calc(var(--site-padding) / 2) var(--site-padding);
+  height: 150px;
 
   h1 {
     align-self: flex-end;
@@ -33,41 +15,74 @@
   }
 }
 
-.gdWorksPosts {
-  display: flex;
-  margin: calc(var(--site-padding) / 2) var(--site-padding);
-  gap: 20px;
+.gdWorksGrid {
+  display: grid;
+  gap: var(--site-padding);
+  grid-template-columns: repeat(3, 1fr);
+  margin: calc(var(--site-padding) * 2) 0 var(--site-padding) 0;
 }
 
-.gdWorksIndPost {
-  width: 200px;
-  height: 200px;
-  border: 1px solid blue;
-  display: block;
+.indGdWorks {
+  height: calc((100vw - (var(--site-padding) * 4)) / 3);
+  margin: calc(var(--site-padding) * 2) 0 var(--site-padding) 0;
   position: relative;
+  width: calc((100vw - (var(--site-padding) * 4)) / 3);
+}
+
+
+.gdWorksImg {
+  height: inherit;
+  width: inherit;
+  // object-fit: contain;
+
+  a {
+    height: inherit;
+    width: inherit;
+  }
+
+  img {
+    height: inherit;
+    margin: 0 auto;
+    object-fit: cover;
+    width: inherit;
+  }
+}
+
+.gdWorksHeader {
+  background-color: #ffffff99;
+  bottom: 0;
+  height: inherit;
+  opacity: 0;
+  position: absolute;
+  width: inherit;
+
+  a {
+    align-content: center;
+    display: flex;
+    height: inherit;
+    justify-content: center;
+  }
 
   h2 {
-    // opacity: 1;
-    opacity: 0;
-    font-style: italic;
-    bottom: 0;
-    margin: 5%;
-    width: 90%;
-
-    position: absolute;
+    align-self: center;
+    color: #000000;
     text-align: center;
   }
 }
 
-.gdWorksIndPost:hover {
-  h2 {
-    animation-name: postHover;
-    animation-duration: 0.5s;
+// make so when webpage width is small, header comes below img like in other works so that title is visible for mobile
+.indGdWorks:hover {
+  .gdWorksHeader {
+    animation-duration: .5s;
+    animation-name: opacityHover;
     opacity: 1;
+
   }
+
 }
 
-@keyframes postHover {
+
+@keyframes opacityHover {
   from {
     opacity: 0;
   }
@@ -76,3 +91,12 @@
     opacity: 1;
   }
 }
+
+// .gdWorksButton {
+//   justify-self: center;
+
+//   a {
+//     background-color: #000000;
+//     color: #ffffff;
+//   }
+// }
