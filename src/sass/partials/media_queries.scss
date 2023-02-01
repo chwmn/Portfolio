@@ -72,6 +72,18 @@
   .otherWorksProcess .otherWorksProcessContent {
     grid-template-columns: 280px 400px;
   }
+
+  //gd works
+  .gdWorks {
+    .gdWorksGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .indGdWorks {
+      height: calc((100vw - (var(--site-padding) * 3)) / 2);
+      width: calc((100vw - (var(--site-padding) * 3)) / 2);
+    }
+  }
 }
 
 @media all and (max-width: 800px) {
@@ -155,6 +167,26 @@
 
     .otherWorksImg {
       height: calc(100vw - (var(--site-padding) * 2));
+    }
+  }
+
+  //gd works
+  // .gdWorks {
+  //   .gdWorksGrid {
+  //     grid-template-columns: repeat(1, 1fr);
+  //   }
+
+  //   .indGdWorks {
+  //     height: calc((100vw - (var(--site-padding) * 2)) / 1);
+  //     width: calc((100vw - (var(--site-padding) * 2)) / 1);
+  //   }
+  // }
+  //gd works
+  .gdWorks {
+    .gdWorksHeader {
+      h2 {
+        font-size:18px;
+      }
     }
   }
 }

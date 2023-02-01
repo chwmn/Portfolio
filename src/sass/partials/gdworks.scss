@@ -24,7 +24,7 @@
 
 .indGdWorks {
   height: calc((100vw - (var(--site-padding) * 4)) / 3);
-  margin: calc(var(--site-padding) * 2) 0 var(--site-padding) 0;
+  // margin: calc(var(--site-padding) * 2) 0 var(--site-padding) 0;
   position: relative;
   width: calc((100vw - (var(--site-padding) * 4)) / 3);
 }
@@ -67,6 +67,7 @@
     align-self: center;
     color: #ffffff;
     text-align: center;
+    margin: 20px;
   }
 }
 
