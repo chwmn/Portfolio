@@ -8,7 +8,7 @@ layout: default.html
   </header>
   <div>
     <div class="gdWorksGrid">
-      {% assign other = collections.gd %} {% for item in other %}
+      {% assign other = collections.gd | sortByPageOrder %} {% for item in other %}
     <div class="indGdWorks">
       <div class="gdWorksImg">
         <a href="{{ item.url }}">
